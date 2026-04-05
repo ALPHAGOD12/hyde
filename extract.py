@@ -154,19 +154,24 @@ def extract_references_regex(pages: list[dict]) -> list[dict]:
 
 LLM_PROMPT = """You are a legal document analyst specializing in Indian securities regulation (SEBI).
 
-Given the following text from a SEBI circular (with page markers like "--- Page X ---"), extract ALL references to external documents including:
-- Other SEBI circulars (any format of circular number)
-- SEBI regulations (e.g. SEBI (Listing Obligations) Regulations, 2015)
-- Indian acts and laws (e.g. Companies Act, 2013)
-- Gazette notifications
+The following references have ALREADY been found by pattern matching:
+{existing_refs}
+
+Your job is to find ADDITIONAL references that the pattern matcher missed. Look for:
+- Non-standard circular formats (e.g. "Ref. No.", descriptive references with dates)
+- Press releases, SEBI emails, letters
+- Informal mentions of regulations or acts
 - Any other regulatory or legal documents referenced
 
-For each reference return:
+Do NOT repeat references already listed above. Only return NEW ones.
+
+For each new reference return:
 - "title": the document title or identifier as it appears in the text
 - "type": one of "circular", "regulation", "act", "gazette", "section_reference", "other"
 - "page_numbers": list of page numbers where it appears
 
 Return ONLY a valid JSON array. No markdown fences, no explanation, no extra text.
+If there are no additional references, return an empty array: []
 
 Text:
 {text}"""
@@ -202,9 +207,19 @@ def _parse_llm_response(text: str) -> list[dict]:
     return []
 
 
-def extract_references_llm(pages: list[dict]) -> list[dict]:
-    """Extract references using Gemini LLM, processing in batches of 3 pages."""
+def extract_references_llm(pages: list[dict], regex_refs: list[dict] = None) -> list[dict]:
+    """Extract references using Gemini LLM, processing in batches of 3 pages.
+
+    If regex_refs is provided, the LLM is told what was already found
+    and asked to only find additional references.
+    """
     import time
+
+    # Format existing regex refs as a simple list for the prompt
+    if regex_refs:
+        existing_list = "\n".join(f"- {r['title']}" for r in regex_refs[:200])  # cap at 200 to avoid prompt bloat
+    else:
+        existing_list = "(none)"
 
     all_refs: dict[str, dict] = {}  # normalized_title -> reference dict
     batch_size = 3
@@ -215,7 +230,7 @@ def extract_references_llm(pages: list[dict]) -> list[dict]:
         for page in batch:
             batch_text += f"\n--- Page {page['page_num']} ---\n{page['text']}"
 
-        prompt = LLM_PROMPT.format(text=batch_text)
+        prompt = LLM_PROMPT.format(text=batch_text, existing_refs=existing_list)
 
         try:
             response_text = _call_gemini(prompt)
@@ -280,9 +295,9 @@ def extract_references(pdf_path: str) -> dict:
     regex_refs = extract_references_regex(pages)
     print(f"  Found {len(regex_refs)} references via regex")
 
-    # LLM pass
-    print("  Running LLM extraction...")
-    llm_refs = extract_references_llm(pages)
+    # LLM pass (informed by regex results)
+    print("  Running LLM extraction (informed by regex results)...")
+    llm_refs = extract_references_llm(pages, regex_refs=regex_refs)
     print(f"  Found {len(llm_refs)} references via LLM")
 
     # Merge: start with regex results, add non-duplicate LLM results
