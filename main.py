@@ -53,6 +53,12 @@ def cmd_evaluate(args):
     run_evaluation(args.pdf, args.ground_truth)
 
 
+def cmd_optimize(args):
+    """Run prompt optimization with judge LLM."""
+    from optimize import optimize_prompt
+    optimize_prompt(args.pdf, args.ground_truth, iterations=args.iterations)
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="SEBI Circular Reference Extractor - Extract and evaluate document references"
@@ -69,12 +75,20 @@ def main():
     eval_parser.add_argument("pdf", help="Path to the SEBI circular PDF")
     eval_parser.add_argument("ground_truth", help="Path to ground truth JSON file")
 
+    # Optimize command
+    opt_parser = subparsers.add_parser("optimize", help="Run prompt optimization with judge LLM")
+    opt_parser.add_argument("pdf", help="Path to the SEBI circular PDF")
+    opt_parser.add_argument("ground_truth", help="Path to ground truth JSON file")
+    opt_parser.add_argument("--iterations", "-n", type=int, default=2, help="Number of optimization iterations")
+
     args = parser.parse_args()
 
     if args.command == "extract":
         cmd_extract(args)
     elif args.command == "evaluate":
         cmd_evaluate(args)
+    elif args.command == "optimize":
+        cmd_optimize(args)
     else:
         parser.print_help()
         sys.exit(1)

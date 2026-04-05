@@ -159,11 +159,35 @@ The following references have ALREADY been found by pattern matching:
 
 Your job is to find ADDITIONAL references that the pattern matcher missed. Look for:
 - Non-standard circular formats (e.g. "Ref. No.", descriptive references with dates)
+- Descriptive references that only have a date and title (e.g. "Oct 27, 2010- European Style Stock Options")
 - Press releases, SEBI emails, letters
 - Informal mentions of regulations or acts
+- Numbered list items that reference circulars by date and subject without a formal circular number
 - Any other regulatory or legal documents referenced
 
 Do NOT repeat references already listed above. Only return NEW ones.
+
+EXAMPLES of what to find:
+
+Example 1 (descriptive reference with date and title):
+Text: "39 Oct 27, 2010- European Style Stock Options"
+Output: {{"title": "Oct 27, 2010- European Style Stock Options", "type": "circular", "page_numbers": [8]}}
+
+Example 2 (SEBI email):
+Text: "108 SEBI Email dated May 4, 2020 on Rationalisation of Strikes on Long dated options"
+Output: {{"title": "SEBI Email dated May 4, 2020 on Rationalisation of Strikes on Long dated options", "type": "other", "page_numbers": [10]}}
+
+Example 3 (numbered list entry with date):
+Text: "97 Dec 15, 2000 -Use of Digital Signature on Contract Notes"
+Output: {{"title": "Dec 15, 2000 - Use of Digital Signature on Contract Notes", "type": "circular", "page_numbers": [10]}}
+
+Example 4 (letter/email reference):
+Text: "SEBI letter dated January 5, 2023."
+Output: {{"title": "SEBI letter dated January 5, 2023", "type": "other", "page_numbers": [13]}}
+
+Example 5 (press release):
+Text: "Press Release No. 49/2018 dated December 03, 2018"
+Output: {{"title": "Press Release No. 49/2018 dated December 03, 2018", "type": "other", "page_numbers": [5]}}
 
 For each new reference return:
 - "title": the document title or identifier as it appears in the text
