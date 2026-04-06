@@ -44,7 +44,7 @@ def _match_title(a: str, b: str) -> bool:
 def _run_extraction_with_prompt(pages, regex_refs, prompt_template):
     """Run LLM extraction using a custom prompt template."""
     all_refs = {}
-    batch_size = 3
+    batch_size = 5  # larger batches to conserve API calls
 
     existing_list = "\n".join(f"- {r['title']}" for r in regex_refs[:200])
 
@@ -137,19 +137,18 @@ SAMPLE of correctly found references (for context):
 YOUR TASK:
 1. Analyze the error patterns — what types of references are being missed? What's being hallucinated?
 2. Rewrite the ENTIRE extraction prompt to fix these issues. The new prompt must:
-   - Keep the {{existing_refs}} and {{text}} template variables (they get filled in at runtime)
+   - Keep the {existing_refs} and {text} template variables exactly as shown (single curly braces — these are Python .format() placeholders)
+   - For any literal JSON braces in few-shot examples, use DOUBLE curly braces {{ and }} so Python's .format() doesn't break
    - Include improved instructions based on error analysis
    - Include 5-7 few-shot examples chosen to address the specific failure patterns
    - Be clear about output format (JSON array)
    - Address any hallucination patterns you see in the false positives
 
-Return a JSON object with:
-- "analysis": string explaining what's going wrong and why
-- "optimized_prompt": the complete new prompt as a string (must contain {{existing_refs}} and {{text}} placeholders)
-- "changes_made": list of strings describing each change and why
-- "expected_improvement": string predicting how metrics should change
+IMPORTANT: Return your response as TWO parts separated by the marker "===PROMPT_SEPARATOR===":
+- Part 1: Your analysis, changes made, and expected improvement as plain text
+- Part 2: The complete optimized prompt (raw text, ready to use with Python .format())
 
-Return ONLY valid JSON. No markdown fences."""
+Do NOT return JSON. Use the separator format described above."""
 
 
 def optimize_prompt(pdf_path: str, ground_truth_path: str, iterations: int = 2):
@@ -214,47 +213,64 @@ def optimize_prompt(pdf_path: str, ground_truth_path: str, iterations: int = 2):
                 if len(correct) >= 10:
                     break
 
-            judge_prompt = JUDGE_PROMPT.format(
-                current_prompt=current_prompt,
-                precision=metrics["precision"],
-                recall=metrics["recall"],
-                f1=metrics["f1"],
-                missed=json.dumps(missed[:20], indent=2),
-                false_positives=json.dumps(
-                    [{"title": r["title"], "type": r["type"]} for r in false_pos[:15]],
-                    indent=2,
-                ),
-                correct_samples=json.dumps(
-                    [{"title": r["title"], "type": r["type"]} for r in correct[:10]],
-                    indent=2,
-                ),
-            )
+            # Use manual replacement to avoid .format() issues with braces
+            judge_prompt = JUDGE_PROMPT
+            judge_prompt = judge_prompt.replace("{current_prompt}", current_prompt)
+            judge_prompt = judge_prompt.replace("{precision}", str(metrics["precision"]))
+            judge_prompt = judge_prompt.replace("{recall}", str(metrics["recall"]))
+            judge_prompt = judge_prompt.replace("{f1}", str(metrics["f1"]))
+            judge_prompt = judge_prompt.replace("{missed}", json.dumps(missed[:20], indent=2))
+            judge_prompt = judge_prompt.replace("{false_positives}", json.dumps(
+                [{"title": r["title"], "type": r["type"]} for r in false_pos[:15]], indent=2
+            ))
+            judge_prompt = judge_prompt.replace("{correct_samples}", json.dumps(
+                [{"title": r["title"], "type": r["type"]} for r in correct[:10]], indent=2
+            ))
 
             try:
                 response = _call_gemini(judge_prompt)
                 text = response.strip()
-                if text.startswith("```"):
-                    text = re.sub(r"^```(?:json)?\s*\n?", "", text)
-                    text = re.sub(r"\n?```\s*$", "", text)
-                judge_result = json.loads(text)
+
+                if "===PROMPT_SEPARATOR===" in text:
+                    parts = text.split("===PROMPT_SEPARATOR===", 1)
+                    analysis_text = parts[0].strip()
+                    new_prompt = parts[1].strip()
+                    # Strip markdown fences if present around the prompt
+                    if new_prompt.startswith("```"):
+                        new_prompt = re.sub(r"^```(?:\w*)?\s*\n?", "", new_prompt)
+                        new_prompt = re.sub(r"\n?```\s*$", "", new_prompt)
+                else:
+                    # Fallback: try to find the prompt after common headers
+                    analysis_text = text[:500]
+                    new_prompt = ""
+
+                print(f"\n  Analysis:\n{analysis_text[:600]}")
+
             except Exception as e:
                 print(f"  Judge failed: {e}")
                 break
 
-            # Print judge analysis
-            print(f"\n  Analysis: {judge_result.get('analysis', 'N/A')[:500]}")
-            print(f"\n  Changes made:")
-            for change in judge_result.get("changes_made", []):
-                print(f"    - {change}")
-            print(f"\n  Expected improvement: {judge_result.get('expected_improvement', 'N/A')}")
-
-            # Update prompt
-            new_prompt = judge_result.get("optimized_prompt", "")
+            # Update prompt if valid
             if new_prompt and "{existing_refs}" in new_prompt and "{text}" in new_prompt:
                 current_prompt = new_prompt
                 print(f"\n  Prompt updated successfully ({len(new_prompt)} chars)")
+            elif new_prompt:
+                # Try fixing common placeholder issues
+                fixed = new_prompt
+                for variant in ["{{existing_refs}}", "<<existing_refs>>", "[existing_refs]", "{existing_refs}"]:
+                    if variant in fixed and variant != "{existing_refs}":
+                        fixed = fixed.replace(variant, "{existing_refs}")
+                for variant in ["{{text}}", "<<text>>", "[text]", "{text}"]:
+                    if variant in fixed and variant != "{text}":
+                        fixed = fixed.replace(variant, "{text}")
+                if "{existing_refs}" in fixed and "{text}" in fixed:
+                    current_prompt = fixed
+                    print(f"\n  Prompt updated (after fixing placeholders, {len(fixed)} chars)")
+                else:
+                    print(f"\n  Warning: Judge returned prompt without valid placeholders, keeping current")
+                    print(f"  (prompt preview: {new_prompt[:300]}...)")
             else:
-                print(f"\n  Warning: Judge returned invalid prompt (missing placeholders), keeping current")
+                print(f"\n  Warning: No prompt returned by judge, keeping current")
 
             time.sleep(5)  # Rate limit
 
