@@ -3,7 +3,7 @@
 import json
 from difflib import SequenceMatcher
 
-from extract import extract_text_by_page, extract_references_regex, extract_references
+from extract import extract_text_by_page, extract_references_regex, extract_references, MATCH_THRESHOLD
 
 
 def load_ground_truth(json_path: str) -> list[dict]:
@@ -12,7 +12,7 @@ def load_ground_truth(json_path: str) -> list[dict]:
         return json.load(f)
 
 
-def _match_title(pred_title: str, gt_title: str, threshold: float = 0.7) -> bool:
+def _match_title(pred_title: str, gt_title: str, threshold: float = MATCH_THRESHOLD) -> bool:
     """Fuzzy match two reference titles."""
     a = pred_title.lower().strip()
     b = gt_title.lower().strip()
@@ -21,26 +21,56 @@ def _match_title(pred_title: str, gt_title: str, threshold: float = 0.7) -> bool
     return SequenceMatcher(None, a, b).ratio() >= threshold
 
 
+def _similarity(pred_title: str, gt_title: str) -> float:
+    """Compute similarity score between two reference titles.
+
+    Substring containment counts as a strong match when the shorter string
+    is a meaningful identifier (>10 chars), since bare circular codes like
+    'MRD/DP/14/2010' are valid references to 'Circular No. MRD/DP/14/2010 dated...'.
+    """
+    a = pred_title.lower().strip()
+    b = gt_title.lower().strip()
+    if a == b:
+        return 1.0
+    if a in b or b in a:
+        shorter = min(len(a), len(b))
+        longer = max(len(a), len(b))
+        if shorter >= 10:
+            return 0.75 + 0.25 * (shorter / longer)
+        return 0.5 + 0.5 * (shorter / longer)
+    return SequenceMatcher(None, a, b).ratio()
+
+
 def compute_metrics(predicted: list[dict], ground_truth: list[dict]) -> dict:
-    """Compute precision, recall, and F1 against ground truth."""
+    """Compute precision, recall, and F1 using optimal bipartite matching.
+
+    Uses a greedy best-match approach: processes pairs in descending order of
+    similarity, so the best matches are made first, preventing fragments from
+    stealing GT slots that have a near-perfect full-form match.
+    """
     if not ground_truth:
         return {"precision": 0.0, "recall": 0.0, "f1": 0.0, "tp": 0, "fp": 0, "fn": 0}
 
     gt_matched = [False] * len(ground_truth)
-    tp = 0
-    fp = 0
+    pred_matched = [False] * len(predicted)
 
-    for pred in predicted:
-        matched = False
-        for i, gt in enumerate(ground_truth):
-            if not gt_matched[i] and _match_title(pred["title"], gt["title"]):
-                gt_matched[i] = True
-                tp += 1
-                matched = True
-                break
-        if not matched:
-            fp += 1
+    scored_pairs = []
+    for pi, pred in enumerate(predicted):
+        for gi, gt in enumerate(ground_truth):
+            sim = _similarity(pred["title"], gt["title"])
+            if sim >= MATCH_THRESHOLD:
+                scored_pairs.append((sim, pi, gi))
 
+    scored_pairs.sort(key=lambda x: x[0], reverse=True)
+
+    for sim, pi, gi in scored_pairs:
+        if pred_matched[pi] or gt_matched[gi]:
+            continue
+        pred_matched[pi] = True
+        gt_matched[gi] = True
+
+    tp = sum(pred_matched)
+    fp = len(predicted) - tp
     fn = sum(1 for m in gt_matched if not m)
 
     precision = tp / (tp + fp) if (tp + fp) > 0 else 0.0
@@ -110,7 +140,7 @@ def run_evaluation(pdf_path: str, ground_truth_path: str):
         print(f"\nMissed references ({hybrid_metrics['fn']}):")
         hybrid_titles = [r["title"] for r in hybrid_refs]
         for gt in ground_truth:
-            matched = any(_match_title(ht, gt["title"]) for ht in hybrid_titles)
+            matched = any(_similarity(ht, gt["title"]) >= MATCH_THRESHOLD for ht in hybrid_titles)
             if not matched:
                 print(f"  - [{gt.get('type', '?')}] {gt['title']}")
 

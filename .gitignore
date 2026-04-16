@@ -2,6 +2,7 @@
 __pycache__/
 *.pyc
 *.pdf
-results/
 .venv/
 venv/
+optimized_prompt.txt
+gepa_optimized_prompt.txt

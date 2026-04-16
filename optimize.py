@@ -6,7 +6,7 @@ import re
 import time
 from difflib import SequenceMatcher
 
-from google import genai
+from openai import OpenAI
 from dotenv import load_dotenv
 
 from extract import (
@@ -15,21 +15,28 @@ from extract import (
     _is_duplicate,
     _parse_llm_response,
     LLM_PROMPT,
+    MATCH_THRESHOLD,
+    _LLM_MODEL,
 )
 from evaluate import compute_metrics, load_ground_truth
 
 load_dotenv()
-_client = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
+_client = OpenAI(base_url="http://127.0.0.1:11434/v1", api_key="ollama")
 
 
-def _call_gemini(prompt: str) -> str:
-    """Call Gemini with retry."""
+def _call_llm(prompt: str) -> str:
+    """Call local LLM via Ollama's OpenAI-compatible API with retry."""
     from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type
 
-    @retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=1, min=2, max=60), retry=retry_if_exception_type(Exception))
+    @retry(stop=stop_after_attempt(5), wait=wait_exponential(multiplier=2, min=4, max=120), retry=retry_if_exception_type(Exception))
     def _call(p):
-        response = _client.models.generate_content(model="gemini-2.5-flash", contents=p)
-        return response.text
+        response = _client.chat.completions.create(
+            messages=[{"role": "user", "content": p}],
+            model=_LLM_MODEL,
+            max_tokens=4096,
+            temperature=0.2,
+        )
+        return response.choices[0].message.content
 
     return _call(prompt)
 
@@ -38,13 +45,21 @@ def _match_title(a: str, b: str) -> bool:
     a, b = a.lower().strip(), b.lower().strip()
     if a in b or b in a:
         return True
-    return SequenceMatcher(None, a, b).ratio() >= 0.7
+    return SequenceMatcher(None, a, b).ratio() >= MATCH_THRESHOLD
+
+
+def _sanitize_prompt_braces(prompt: str) -> str:
+    """Escape all {/} in the prompt except the {text} and {existing_refs} placeholders."""
+    prompt = prompt.replace("{", "{{").replace("}", "}}")
+    prompt = prompt.replace("{{text}}", "{text}")
+    prompt = prompt.replace("{{existing_refs}}", "{existing_refs}")
+    return prompt
 
 
 def _run_extraction_with_prompt(pages, regex_refs, prompt_template):
     """Run LLM extraction using a custom prompt template."""
     all_refs = {}
-    batch_size = 5  # larger batches to conserve API calls
+    batch_size = 3
 
     existing_list = "\n".join(f"- {r['title']}" for r in regex_refs[:200])
 
@@ -57,7 +72,7 @@ def _run_extraction_with_prompt(pages, regex_refs, prompt_template):
         prompt = prompt_template.format(text=batch_text, existing_refs=existing_list)
 
         try:
-            response_text = _call_gemini(prompt)
+            response_text = _call_llm(prompt)
             refs = _parse_llm_response(response_text)
         except Exception as e:
             print(f"    Warning: LLM failed for pages {batch[0]['page_num']}-{batch[-1]['page_num']}: {e}")
@@ -83,7 +98,7 @@ def _run_extraction_with_prompt(pages, regex_refs, prompt_template):
                 }
 
         if i + batch_size < len(pages):
-            time.sleep(2)
+            time.sleep(1)
 
     return list(all_refs.values())
 
@@ -116,23 +131,23 @@ It uses two passes: regex (already done) and then an LLM (your prompt to optimiz
 
 Here is the CURRENT extraction prompt being used:
 --- START CURRENT PROMPT ---
-{current_prompt}
+__CURRENT_PROMPT__
 --- END CURRENT PROMPT ---
 
 Here are the EVALUATION RESULTS from running this prompt:
 
-Precision: {precision} (of extracted refs, what fraction are real)
-Recall: {recall} (of real refs, what fraction did we find)
-F1: {f1}
+Precision: __PRECISION__ (of extracted refs, what fraction are real)
+Recall: __RECALL__ (of real refs, what fraction did we find)
+F1: __F1__
 
 MISSED references (the system failed to find these — FALSE NEGATIVES):
-{missed}
+__MISSED__
 
 FALSE POSITIVES (the system found these but they are not real references):
-{false_positives}
+__FALSE_POSITIVES__
 
 SAMPLE of correctly found references (for context):
-{correct_samples}
+__CORRECT_SAMPLES__
 
 YOUR TASK:
 1. Analyze the error patterns — what types of references are being missed? What's being hallucinated?
@@ -163,6 +178,8 @@ def optimize_prompt(pdf_path: str, ground_truth_path: str, iterations: int = 2):
     regex_refs = extract_references_regex(pages)
 
     current_prompt = LLM_PROMPT
+    best_prompt = current_prompt
+    best_f1 = 0.0
     results_history = []
 
     for iteration in range(iterations):
@@ -191,6 +208,14 @@ def optimize_prompt(pdf_path: str, ground_truth_path: str, iterations: int = 2):
         print(f"  Missed:    {len(missed)}")
         print(f"  False pos: {len(false_pos)}")
 
+        if metrics["f1"] > best_f1:
+            best_f1 = metrics["f1"]
+            best_prompt = current_prompt
+            print(f"  ✓ New best F1: {best_f1:.3f}")
+        elif iteration > 0:
+            print(f"  ✗ F1 regressed ({metrics['f1']:.3f} < {best_f1:.3f}), will rollback to best prompt")
+            current_prompt = best_prompt
+
         results_history.append({
             "iteration": iteration + 1,
             "metrics": metrics,
@@ -213,22 +238,21 @@ def optimize_prompt(pdf_path: str, ground_truth_path: str, iterations: int = 2):
                 if len(correct) >= 10:
                     break
 
-            # Use manual replacement to avoid .format() issues with braces
             judge_prompt = JUDGE_PROMPT
-            judge_prompt = judge_prompt.replace("{current_prompt}", current_prompt)
-            judge_prompt = judge_prompt.replace("{precision}", str(metrics["precision"]))
-            judge_prompt = judge_prompt.replace("{recall}", str(metrics["recall"]))
-            judge_prompt = judge_prompt.replace("{f1}", str(metrics["f1"]))
-            judge_prompt = judge_prompt.replace("{missed}", json.dumps(missed[:20], indent=2))
-            judge_prompt = judge_prompt.replace("{false_positives}", json.dumps(
+            judge_prompt = judge_prompt.replace("__CURRENT_PROMPT__", current_prompt)
+            judge_prompt = judge_prompt.replace("__PRECISION__", str(metrics["precision"]))
+            judge_prompt = judge_prompt.replace("__RECALL__", str(metrics["recall"]))
+            judge_prompt = judge_prompt.replace("__F1__", str(metrics["f1"]))
+            judge_prompt = judge_prompt.replace("__MISSED__", json.dumps(missed[:20], indent=2))
+            judge_prompt = judge_prompt.replace("__FALSE_POSITIVES__", json.dumps(
                 [{"title": r["title"], "type": r["type"]} for r in false_pos[:15]], indent=2
             ))
-            judge_prompt = judge_prompt.replace("{correct_samples}", json.dumps(
+            judge_prompt = judge_prompt.replace("__CORRECT_SAMPLES__", json.dumps(
                 [{"title": r["title"], "type": r["type"]} for r in correct[:10]], indent=2
             ))
 
             try:
-                response = _call_gemini(judge_prompt)
+                response = _call_llm(judge_prompt)
                 text = response.strip()
 
                 if "===PROMPT_SEPARATOR===" in text:
@@ -252,8 +276,8 @@ def optimize_prompt(pdf_path: str, ground_truth_path: str, iterations: int = 2):
 
             # Update prompt if valid
             if new_prompt and "{existing_refs}" in new_prompt and "{text}" in new_prompt:
-                current_prompt = new_prompt
-                print(f"\n  Prompt updated successfully ({len(new_prompt)} chars)")
+                current_prompt = _sanitize_prompt_braces(new_prompt)
+                print(f"\n  Prompt updated successfully ({len(current_prompt)} chars)")
             elif new_prompt:
                 # Try fixing common placeholder issues
                 fixed = new_prompt
@@ -264,15 +288,15 @@ def optimize_prompt(pdf_path: str, ground_truth_path: str, iterations: int = 2):
                     if variant in fixed and variant != "{text}":
                         fixed = fixed.replace(variant, "{text}")
                 if "{existing_refs}" in fixed and "{text}" in fixed:
-                    current_prompt = fixed
-                    print(f"\n  Prompt updated (after fixing placeholders, {len(fixed)} chars)")
+                    current_prompt = _sanitize_prompt_braces(fixed)
+                    print(f"\n  Prompt updated (after fixing placeholders, {len(current_prompt)} chars)")
                 else:
                     print(f"\n  Warning: Judge returned prompt without valid placeholders, keeping current")
                     print(f"  (prompt preview: {new_prompt[:300]}...)")
             else:
                 print(f"\n  Warning: No prompt returned by judge, keeping current")
 
-            time.sleep(5)  # Rate limit
+            time.sleep(2)  # Brief pause between iterations
 
     # ---------------------------------------------------------------------------
     # Summary
@@ -293,11 +317,11 @@ def optimize_prompt(pdf_path: str, ground_truth_path: str, iterations: int = 2):
         print(f"\n  F1 improvement: {first['f1']:.3f} → {last['f1']:.3f} ({last['f1'] - first['f1']:+.3f})")
         print(f"  Recall improvement: {first['recall']:.3f} → {last['recall']:.3f} ({last['recall'] - first['recall']:+.3f})")
 
-    # Save the optimized prompt
-    if current_prompt != LLM_PROMPT:
+    # Save the best prompt found across all iterations
+    if best_prompt != LLM_PROMPT:
         with open("optimized_prompt.txt", "w") as f:
-            f.write(current_prompt)
-        print(f"\n  Optimized prompt saved to optimized_prompt.txt")
+            f.write(best_prompt)
+        print(f"\n  Best prompt (F1={best_f1:.3f}) saved to optimized_prompt.txt")
 
     return results_history
 

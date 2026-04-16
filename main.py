@@ -59,6 +59,17 @@ def cmd_optimize(args):
     optimize_prompt(args.pdf, args.ground_truth, iterations=args.iterations)
 
 
+def cmd_gepa(args):
+    """Run GEPA evolutionary prompt optimization."""
+    from gepa_optimize import GEPAOptimizer
+    optimizer = GEPAOptimizer(
+        args.pdf, args.ground_truth,
+        population_size=args.population,
+        iterations=args.iterations,
+    )
+    optimizer.run()
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="SEBI Circular Reference Extractor - Extract and evaluate document references"
@@ -81,6 +92,13 @@ def main():
     opt_parser.add_argument("ground_truth", help="Path to ground truth JSON file")
     opt_parser.add_argument("--iterations", "-n", type=int, default=2, help="Number of optimization iterations")
 
+    # GEPA command
+    gepa_parser = subparsers.add_parser("gepa", help="Run GEPA evolutionary prompt optimization")
+    gepa_parser.add_argument("pdf", help="Path to the SEBI circular PDF")
+    gepa_parser.add_argument("ground_truth", help="Path to ground truth JSON file")
+    gepa_parser.add_argument("--iterations", "-n", type=int, default=5, help="Number of evolution iterations")
+    gepa_parser.add_argument("--population", "-p", type=int, default=4, help="Population size")
+
     args = parser.parse_args()
 
     if args.command == "extract":
@@ -89,6 +107,8 @@ def main():
         cmd_evaluate(args)
     elif args.command == "optimize":
         cmd_optimize(args)
+    elif args.command == "gepa":
+        cmd_gepa(args)
     else:
         parser.print_help()
         sys.exit(1)

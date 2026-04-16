@@ -1,0 +1,3851 @@
+{
+  "references": [
+    {
+      "title": "MRD/DP/14/2010",
+      "type": "circular",
+      "page_numbers": [
+        1
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DP/21/2010",
+      "type": "circular",
+      "page_numbers": [
+        1
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DP/30/2010",
+      "type": "circular",
+      "page_numbers": [
+        1
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DP/32/2010",
+      "type": "circular",
+      "page_numbers": [
+        1
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SMDRP/POLICY/Cir-8/99 dated April 26, 1999",
+      "type": "circular",
+      "page_numbers": [
+        1,
+        3,
+        4,
+        11,
+        12
+      ],
+      "source": "both"
+    },
+    {
+      "title": "Circular No. SMDRP/POLICY/CIR-32/99 dated September 14, 1999",
+      "type": "circular",
+      "page_numbers": [
+        1,
+        11,
+        12
+      ],
+      "source": "both"
+    },
+    {
+      "title": "Circular No. SMDRP/POLICY/CIR-04/2000 dated January 20, 2000",
+      "type": "circular",
+      "page_numbers": [
+        1,
+        3,
+        5,
+        6,
+        9,
+        11,
+        12
+      ],
+      "source": "both"
+    },
+    {
+      "title": "Circular No. SMDRP/Policy/Cir-41/2000 dated September 11, 2000",
+      "type": "circular",
+      "page_numbers": [
+        1,
+        3,
+        5,
+        12
+      ],
+      "source": "both"
+    },
+    {
+      "title": "Circular No. SMDRP/Policy/CIR-39/2001 dated July 18, 2001",
+      "type": "circular",
+      "page_numbers": [
+        1,
+        5,
+        6
+      ],
+      "source": "both"
+    },
+    {
+      "title": "Circular No. SMDRP/POLICY/CIR-14/2002 dated June 25, 2002",
+      "type": "circular",
+      "page_numbers": [
+        1,
+        9,
+        12
+      ],
+      "source": "both"
+    },
+    {
+      "title": "Circular No. SEBI/SMD/SE/11/2003/31/03 dated March 31, 2003",
+      "type": "circular",
+      "page_numbers": [
+        1,
+        5,
+        12
+      ],
+      "source": "both"
+    },
+    {
+      "title": "Circular No. SEBI/MRD/SE/Cir-38/2003 dated October 8, 2003",
+      "type": "circular",
+      "page_numbers": [
+        1,
+        2,
+        6,
+        10,
+        11,
+        12,
+        13
+      ],
+      "source": "both"
+    },
+    {
+      "title": "Circular No SEBI/MRD/Policy/CIR-13/2004 dated March 3, 2004",
+      "type": "circular",
+      "page_numbers": [
+        1,
+        6,
+        13
+      ],
+      "source": "both"
+    },
+    {
+      "title": "Circular No. SEBI/MRD/Policy/AT/Cir-20/2004 dated April 30, 2004",
+      "type": "circular",
+      "page_numbers": [
+        1,
+        3,
+        6,
+        10,
+        11
+      ],
+      "source": "both"
+    },
+    {
+      "title": "Circular No. MRD/DoP/SE/Cir-28/2004 dated August 23, 2004",
+      "type": "circular",
+      "page_numbers": [
+        1,
+        3,
+        11,
+        12,
+        13
+      ],
+      "source": "both"
+    },
+    {
+      "title": "Circular No. MRD/DoP/Dep/Cir-09/06 dated July 20, 2006",
+      "type": "circular",
+      "page_numbers": [
+        1
+      ],
+      "source": "both"
+    },
+    {
+      "title": "Circular No. MRD/DoP/Dep/SE/Cir-13/06 dated September 26, 2006",
+      "type": "circular",
+      "page_numbers": [
+        1
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. MRD/DoP/Cir-05/2007 dated April 27, 2007",
+      "type": "circular",
+      "page_numbers": [
+        1,
+        2,
+        6,
+        12,
+        13
+      ],
+      "source": "both"
+    },
+    {
+      "title": "Circular No. MRD/DoP/Cir-20/2008 dated June 30, 2008",
+      "type": "circular",
+      "page_numbers": [
+        1,
+        3,
+        10
+      ],
+      "source": "both"
+    },
+    {
+      "title": "Circular No. MRD/DoP/SE/Cir-14/2009 dated October 14, 2009",
+      "type": "circular",
+      "page_numbers": [
+        1
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/MRD/DoP/SE/RTA/Cir-03/2010 dated January 07, 2010",
+      "type": "circular",
+      "page_numbers": [
+        1,
+        5,
+        6,
+        11,
+        12,
+        13
+      ],
+      "source": "both"
+    },
+    {
+      "title": "Circular No. MRD/DP/14/2010 dated April 26, 2010",
+      "type": "circular",
+      "page_numbers": [
+        1,
+        3,
+        5,
+        6,
+        12
+      ],
+      "source": "both"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DP/21/2010 dated July 15, 2010",
+      "type": "circular",
+      "page_numbers": [
+        1,
+        2,
+        6,
+        12
+      ],
+      "source": "both"
+    },
+    {
+      "title": "Circular No CIR/MRD/DP/30/2010 dated September 6, 2010",
+      "type": "circular",
+      "page_numbers": [
+        1,
+        6,
+        12,
+        13
+      ],
+      "source": "both"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DP/32/2010 dated September 17, 2010",
+      "type": "circular",
+      "page_numbers": [
+        1,
+        7,
+        10,
+        11
+      ],
+      "source": "both"
+    },
+    {
+      "title": "SEBI/HO/MRD/MRD-PoD-3/P/CIR/2022/166",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "both"
+    },
+    {
+      "title": "SEBI/HO/MRD/MRD-PoD-3/P/CIR/2023/10",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "CIR/DNPD/6/2011",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DP/07/2011",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DP/01/2012",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DP/02/2012",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DP/05/2012",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DP/7/2012",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DP/8/2012",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DP/18/2012",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DP/30/2012",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DP/34/2012",
+      "type": "circular",
+      "page_numbers": [
+        2,
+        6
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DP/03/2013",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DP/04/2013",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DP/05/2013",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DP/6/2013",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DP/17/2013",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DP/18/2013",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DP/25/2013",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DP/27/2013",
+      "type": "circular",
+      "page_numbers": [
+        2,
+        6
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DP/38/2013",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DP/04/2014",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DP/19/2014",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DP/14/2014",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DP/24/2014",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DP/32/2014",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DP/02/2015",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DP/12/2015",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DP/15/2015",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DP/54/2017",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DP/86/2017",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DP/118/2017",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DP/122/2017",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DP/07/2011 dated June 16, 2011",
+      "type": "circular",
+      "page_numbers": [
+        2,
+        7
+      ],
+      "source": "both"
+    },
+    {
+      "title": "Circular No. CIR/DNPD/6/2011 dated July 5, 2011",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DP/01/2012 dated January 20, 2012",
+      "type": "circular",
+      "page_numbers": [
+        2,
+        6,
+        10,
+        11
+      ],
+      "source": "both"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DP/02/2012 dated January 20, 2012",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DP/7/2012 dated February 23, 2012",
+      "type": "circular",
+      "page_numbers": [
+        2,
+        6,
+        10,
+        11,
+        13
+      ],
+      "source": "both"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DP/8/2012 dated February 27, 2012",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DP/18/2012 dated July 18, 2012",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DP/30/2012 dated November 22, 2012",
+      "type": "circular",
+      "page_numbers": [
+        2,
+        10,
+        13
+      ],
+      "source": "both"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DP/34/2012 dated December 13, 2012",
+      "type": "circular",
+      "page_numbers": [
+        2,
+        6,
+        5,
+        13,
+        7
+      ],
+      "source": "both"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DP/03/2013 dated January 24, 2013",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular no. CIR/MRD/DP/04/2013 dated January 25, 2013",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DP/05/2013 dated February 08, 2013",
+      "type": "circular",
+      "page_numbers": [
+        2,
+        6,
+        10,
+        11
+      ],
+      "source": "both"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DP/6/2013 dated Februaty 14, 2013",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DP/17/2013 dated May 30, 2013",
+      "type": "circular",
+      "page_numbers": [
+        2,
+        5,
+        12,
+        13
+      ],
+      "source": "both"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DP/18/2013 dated May 30, 2013",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DP/25/2013 dated September 03, 2013",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No CIR/MRD/DP/27/2013 dated September 12, 2013",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DP/38/2013 dated December 19, 2013",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DP/04/2014 dated February 06, 2014",
+      "type": "circular",
+      "page_numbers": [
+        2,
+        3
+      ],
+      "source": "both"
+    },
+    {
+      "title": "Circular No. SEBI/MRD/DP/19/2014 dated June 03, 2014",
+      "type": "circular",
+      "page_numbers": [
+        2,
+        3,
+        5,
+        7,
+        10,
+        11,
+        13
+      ],
+      "source": "both"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DP/14/2014 dated April 23, 2014",
+      "type": "circular",
+      "page_numbers": [
+        2,
+        13
+      ],
+      "source": "both"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DP/24/2014 dated August 08, 2014",
+      "type": "circular",
+      "page_numbers": [
+        2,
+        4
+      ],
+      "source": "both"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DP/32/2014 dated December 01, 2014",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DP/02/2015 dated January 12, 2015",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DP/12/2015 dated June 26, 2015",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DP/15/2015 dated July 16, 2015",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DP/54/2017 dated June 13, 2017",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DP/86/2017 dated August 01, 2017",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DP/118/2017 dated October 26, 2017",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DP/122/2017 dated November 17, 2017",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/CIR/MRD/DoP-1/P/125/2018 dated August 24, 2018",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD/DOP1/CIR/P/2019/106 dated October 10, 2019",
+      "type": "circular",
+      "page_numbers": [
+        2,
+        5
+      ],
+      "source": "both"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD2/DCAP/CIR/P/2019/146 dated November 28, 2019",
+      "type": "circular",
+      "page_numbers": [
+        2,
+        4,
+        7,
+        10,
+        11
+      ],
+      "source": "both"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD1/DSAP/CIR/P/2020/29 dated February 26, 2020",
+      "type": "circular",
+      "page_numbers": [
+        2,
+        4,
+        6,
+        13
+      ],
+      "source": "both"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD/DCAP/CIR/P/2020/190 dated October 01, 2020",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD2/DCAP/CIR/P/227 dated November 06, 2020",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD2/DCAP/CIR/P/2020/243 dated December 18, 2020",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD/DSA/CIR/P/2021/623 dated September 01, 2021",
+      "type": "circular",
+      "page_numbers": [
+        2,
+        7
+      ],
+      "source": "both"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD/MRD-PoD-3/P/CIR/2023/10 dated January 10, 2023",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "SEBI/HO/MRD/MRD-PoD-3/P/CIR/2024/1",
+      "type": "circular",
+      "page_numbers": [
+        3
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "SEBI/HO/MRD/MRD-PoD-3/P/CIR/2024/6",
+      "type": "circular",
+      "page_numbers": [
+        3
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "SEBI/HO/MRD/TPD-1/P/CIR/2024/58",
+      "type": "circular",
+      "page_numbers": [
+        3,
+        6
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "SEBI/HO/MRD/TPD-1/P/CIR/2024/92",
+      "type": "circular",
+      "page_numbers": [
+        3
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "SEBI/HO/MRD/MRD-PoD-2/P/CIR/2024/118",
+      "type": "circular",
+      "page_numbers": [
+        3
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/Policy/SE/15864/2003",
+      "type": "circular",
+      "page_numbers": [
+        3
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DP/26/2010",
+      "type": "circular",
+      "page_numbers": [
+        3
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DP/8/2011",
+      "type": "circular",
+      "page_numbers": [
+        3
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DP/09/2012",
+      "type": "circular",
+      "page_numbers": [
+        3
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DP/20/2012",
+      "type": "circular",
+      "page_numbers": [
+        3
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DP/16/2013",
+      "type": "circular",
+      "page_numbers": [
+        3
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DP/24/2013",
+      "type": "circular",
+      "page_numbers": [
+        3
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DMS/34/2013",
+      "type": "circular",
+      "page_numbers": [
+        3
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DP/06/2014",
+      "type": "circular",
+      "page_numbers": [
+        3
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DP/07/2014",
+      "type": "circular",
+      "page_numbers": [
+        3
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DP/07/2015",
+      "type": "circular",
+      "page_numbers": [
+        3
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD-TPD1/CIR/P/2023/55 dated April 11, 2023",
+      "type": "circular",
+      "page_numbers": [
+        3,
+        4
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD/MRD-PoD-3/P/CIR/2024/1 dated January 05, 2024",
+      "type": "circular",
+      "page_numbers": [
+        3
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD/MRD-PoD-3/P/CIR/2024/6 dated January 23, 2024",
+      "type": "circular",
+      "page_numbers": [
+        3
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD/TPD-1/P/CIR/2024/58 dated May 24, 2024",
+      "type": "circular",
+      "page_numbers": [
+        3,
+        6
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD/TPD-1/P/CIR/2024/92 dated July 01, 2024",
+      "type": "circular",
+      "page_numbers": [
+        3
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD/MRD-PoD-2/P/CIR/2024/118 dated September 11, 2024",
+      "type": "circular",
+      "page_numbers": [
+        3
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SMDRP/POLICY/TTA-14072/CIR-23/99 dated July 12, 1999",
+      "type": "circular",
+      "page_numbers": [
+        3
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SMDRP/Policy/Cir-48/2000 dated October 11, 2000",
+      "type": "circular",
+      "page_numbers": [
+        3
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SMDRP/POLICY/CIR-56/00 dated December 15, 2000",
+      "type": "circular",
+      "page_numbers": [
+        3
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/SMD/SE/15/2003/29/04 dated April 29, 2003",
+      "type": "circular",
+      "page_numbers": [
+        3
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/MRD/Policy/SE/15864/2003 dated August 21, 2003",
+      "type": "circular",
+      "page_numbers": [
+        3
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/MRD/SE/Cir-11/2004 dated February 25, 2004",
+      "type": "circular",
+      "page_numbers": [
+        3
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. MRD/DoP/SE/Cir-20/2005 dated September 8, 2005",
+      "type": "circular",
+      "page_numbers": [
+        3
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DP/26/2010 dated August 27, 2010",
+      "type": "circular",
+      "page_numbers": [
+        3
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DP/8/2011 dated June 30, 2011",
+      "type": "circular",
+      "page_numbers": [
+        3
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DP/09/2012 dated March 30, 2012",
+      "type": "circular",
+      "page_numbers": [
+        3
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DP/20/2012 dated August 02, 2012",
+      "type": "circular",
+      "page_numbers": [
+        3
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DP/16/2013 dated May 21, 2013",
+      "type": "circular",
+      "page_numbers": [
+        3
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DP/24/2013 dated August 19, 2013",
+      "type": "circular",
+      "page_numbers": [
+        3
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DMS/34/2013 dated November 06, 2013",
+      "type": "circular",
+      "page_numbers": [
+        3
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DP/06/2014 dated February 07, 2014",
+      "type": "circular",
+      "page_numbers": [
+        3
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DP/07/2014 dated February 11, 2014",
+      "type": "circular",
+      "page_numbers": [
+        3
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DP/07/2015 dated May 13, 2015",
+      "type": "circular",
+      "page_numbers": [
+        3
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Ref. No. DNPD/Cir- 22 /04 dated April 01, 2004",
+      "type": "circular",
+      "page_numbers": [
+        3
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "Ref.No. DNPD/Cir-24/04 dated May 26, 2004 (STP Guidelines)",
+      "type": "circular",
+      "page_numbers": [
+        3
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "SEBI/HO/MRD/TPD/P/CIR/2023/65",
+      "type": "circular",
+      "page_numbers": [
+        4
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "SEBI/HO/MRD/TPD/P/CIR/2023/147",
+      "type": "circular",
+      "page_numbers": [
+        4
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "SEBI/HO/MRD/TPD/P/CIR/2024/192",
+      "type": "circular",
+      "page_numbers": [
+        4
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "SEBI/HO/MRD/MRD-PoD-1/P/CIR/2024/62",
+      "type": "circular",
+      "page_numbers": [
+        4
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "SEBI/HO/MRD/TPD-1/P/CIR/2024/68",
+      "type": "circular",
+      "page_numbers": [
+        4
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "SEBI/HO/MRD/TPD/P/CIR/2024/84",
+      "type": "circular",
+      "page_numbers": [
+        4
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "SEBI/HO/MRD/TPD-1/P/CIR/2024/12419",
+      "type": "circular",
+      "page_numbers": [
+        4
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "SEBI/HO/MRD/TPD-1/P/CIR/2024/11924",
+      "type": "circular",
+      "page_numbers": [
+        4
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DP/13/2015",
+      "type": "circular",
+      "page_numbers": [
+        4
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DP/17/2015",
+      "type": "circular",
+      "page_numbers": [
+        4,
+        11
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/CSC/148/2018",
+      "type": "circular",
+      "page_numbers": [
+        4
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/CSC/151/2018",
+      "type": "circular",
+      "page_numbers": [
+        4
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DP/13/2015 dated July 06, 2015",
+      "type": "circular",
+      "page_numbers": [
+        4
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DP/17/2015 dated October 08, 2015",
+      "type": "circular",
+      "page_numbers": [
+        4,
+        11
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. CIR/HO/MRD/DP/CIR/P/2016/129 dated December 01, 2016",
+      "type": "circular",
+      "page_numbers": [
+        4
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD/DP/CIR/P/2017/08 dated January 20, 2017",
+      "type": "circular",
+      "page_numbers": [
+        4
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular no. SEBI/HO/MRD/DP/CIR/P/2018/62 dated April 09, 2018",
+      "type": "circular",
+      "page_numbers": [
+        4,
+        7
+      ],
+      "source": "both"
+    },
+    {
+      "title": "Circular No. CIR/MRD/CSC/148/2018 dated December 07, 2018",
+      "type": "circular",
+      "page_numbers": [
+        4
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD/DoP1/CIR/P/2019/24 dated January 31, 2019",
+      "type": "circular",
+      "page_numbers": [
+        4
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD1/DSAP/CIR/P/2020/107 dated June 24, 2020",
+      "type": "circular",
+      "page_numbers": [
+        4
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD1/DTCS/CIR/P/2021/590 dated July 05, 2021",
+      "type": "circular",
+      "page_numbers": [
+        4
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD-TPD-1/CIR/P/2023/7 dated January 09, 2023",
+      "type": "circular",
+      "page_numbers": [
+        4
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD/TPD/P/CIR/2023/65 dated May 05, 2023",
+      "type": "circular",
+      "page_numbers": [
+        4
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD/TPD/P/CIR/2023/147 dated August 24, 2023",
+      "type": "circular",
+      "page_numbers": [
+        4
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD/TPD/P/CIR/2024/192 dated December 20, 2023",
+      "type": "circular",
+      "page_numbers": [
+        4
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD/MRD-PoD-1/P/CIR/2024/62 dated May 27, 2024",
+      "type": "circular",
+      "page_numbers": [
+        4
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD/TPD-1/P/CIR/2024/68 dated May 30, 2024",
+      "type": "circular",
+      "page_numbers": [
+        4
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD/TPD/P/CIR/2024/84 dated June 20, 2024",
+      "type": "circular",
+      "page_numbers": [
+        4
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular SEBI/HO/MRD/TPD-1/P/CIR/2024/12419 dated September 12, 2024",
+      "type": "circular",
+      "page_numbers": [
+        4
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular SEBI/HO/MRD/TPD-1/P/CIR/2024/11924 dated September 20, 2024",
+      "type": "circular",
+      "page_numbers": [
+        4
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SMD/RCG/2796/96 dated July 16, 1996",
+      "type": "circular",
+      "page_numbers": [
+        4
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SMD/Policy/IECG/5548/96 dated December 09, 1996",
+      "type": "circular",
+      "page_numbers": [
+        4,
+        1,
+        11
+      ],
+      "source": "both"
+    },
+    {
+      "title": "Circular No. SMD/POLICY/CIR/7-97 dated April 16, 1997",
+      "type": "circular",
+      "page_numbers": [
+        4
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SMD/POLICY/SGF/CIR-13/97 dated June 09, 1997",
+      "type": "circular",
+      "page_numbers": [
+        4
+      ],
+      "source": "both"
+    },
+    {
+      "title": "Circular No. SMD/POLICY/GBDN/CIR-25/97 dated October 09, 1997",
+      "type": "circular",
+      "page_numbers": [
+        4
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SMD/Policy/Cir-32/97 dated December 03, 1997",
+      "type": "circular",
+      "page_numbers": [
+        4
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SMD/Policy/Cir-10/99 dated May 04, 1999",
+      "type": "circular",
+      "page_numbers": [
+        4
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SMD/DBA-1/SS/Policy/Cir-34/2000 dated August 2, 2000",
+      "type": "circular",
+      "page_numbers": [
+        4
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SMDRP/Policy/Cir-05/2001 dated February 01, 2001",
+      "type": "circular",
+      "page_numbers": [
+        4
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SMDRP/POLICY/CIR-42/2001 dated August 10, 2001",
+      "type": "circular",
+      "page_numbers": [
+        4
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Ref. No. SE/10118 dated October 12, 1992.",
+      "type": "circular",
+      "page_numbers": [
+        4
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "Ref. SMD-I/22532 dated October 19, 1993.",
+      "type": "circular",
+      "page_numbers": [
+        4,
+        11
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "SEBI/HO/MIRSD/DoP/P/CIR/2021/595",
+      "type": "circular",
+      "page_numbers": [
+        5
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "SEBI/HO/MRD2/DCAP/P/CIR/2021/628",
+      "type": "circular",
+      "page_numbers": [
+        5,
+        6
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "SEBI/HO/MRD/MRD-PoD-3/P/CIR/2024/20",
+      "type": "circular",
+      "page_numbers": [
+        5
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "SEBI/HO/MRD/MRD-PoD-3/P/CIR/2024/65",
+      "type": "circular",
+      "page_numbers": [
+        5,
+        6,
+        11,
+        13
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "SEBI/HO/MRD/MRD-PoD-2/P/CIR/2024/131",
+      "type": "circular",
+      "page_numbers": [
+        5
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "SEBI/HO/MRD/MRD-PoD-2/P/CIR/2024/137",
+      "type": "circular",
+      "page_numbers": [
+        5
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DP/06/2011",
+      "type": "circular",
+      "page_numbers": [
+        5
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DP/03/2015",
+      "type": "circular",
+      "page_numbers": [
+        5
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DP/28/2014",
+      "type": "circular",
+      "page_numbers": [
+        5
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DRMNP/25/2014",
+      "type": "circular",
+      "page_numbers": [
+        5
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DRMNP/8/2015",
+      "type": "circular",
+      "page_numbers": [
+        5
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DRMNP/16/2015",
+      "type": "circular",
+      "page_numbers": [
+        5
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DRMNP/33/2017",
+      "type": "circular",
+      "page_numbers": [
+        5
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SMDRPD/Policy/Cir-43/2001 dated August 20, 2001",
+      "type": "circular",
+      "page_numbers": [
+        5
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SMDRP/POLICY/CIR-46/2001 dated September 27, 2001",
+      "type": "circular",
+      "page_numbers": [
+        5
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SMD/Policy/Cir-03/2002 dated January 30, 2002",
+      "type": "circular",
+      "page_numbers": [
+        5
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SMD/Policy/Cir-08/2002 dated April 16, 2002",
+      "type": "circular",
+      "page_numbers": [
+        5
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SMD/Policy/Cir-15/2002 dated June 26, 2002",
+      "type": "circular",
+      "page_numbers": [
+        5
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SMD/Policy/Cir-21/02 dated September 04, 2002",
+      "type": "circular",
+      "page_numbers": [
+        5
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/SMD/SE/Cir-26/2003/25/06 dated June 25, 2003",
+      "type": "circular",
+      "page_numbers": [
+        5
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/MRD/SE/SU/Cir-15/04 dated March 19, 2004",
+      "type": "circular",
+      "page_numbers": [
+        5
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. MRD/DoP/SE/Dep/Cir-30/2004 dated August 24, 2004",
+      "type": "circular",
+      "page_numbers": [
+        5
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. MRD/DoP/SE/Cir-38/2004 dated October 28, 2004",
+      "type": "circular",
+      "page_numbers": [
+        5
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. MRD/Dop/SE/Dep/Cir-18/2005 dated September 02, 2005",
+      "type": "circular",
+      "page_numbers": [
+        5
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. MRD/DoP/SE/Cir-21/2006 dated December 14, 2006",
+      "type": "circular",
+      "page_numbers": [
+        5
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DP/06/2011 dated June 16, 2011",
+      "type": "circular",
+      "page_numbers": [
+        5
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DP/03/2015 dated March 24 2015",
+      "type": "circular",
+      "page_numbers": [
+        5,
+        11
+      ],
+      "source": "both"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DP/28/2014 dated September 29, 2014",
+      "type": "circular",
+      "page_numbers": [
+        5
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DRMNP/25/2014 dated August 27, 2014",
+      "type": "circular",
+      "page_numbers": [
+        5
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DP/03/2015 dated March 24, 2015",
+      "type": "circular",
+      "page_numbers": [
+        5
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DRMNP/8/2015 dated May 14, 2015",
+      "type": "circular",
+      "page_numbers": [
+        5
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DRMNP/16/2015 dated August 06, 2015",
+      "type": "circular",
+      "page_numbers": [
+        5
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD/DRMNP/CIR/P/2016/54 dated May 4, 2016",
+      "type": "circular",
+      "page_numbers": [
+        5
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DRMNP/33/2017 dated April 26, 2017",
+      "type": "circular",
+      "page_numbers": [
+        5
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD2/DCAP/CIR/P/2020/01 dated January 03, 2020",
+      "type": "circular",
+      "page_numbers": [
+        5
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD2/DCAP/CIR/P/2020/245 dated December 21, 2020",
+      "type": "circular",
+      "page_numbers": [
+        5,
+        13
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD2/DCAP/CIR/P/2021/03 dated January 08, 2021",
+      "type": "circular",
+      "page_numbers": [
+        5
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MIRSD/DoP/P/CIR/2021/595 dated July 16, 2021",
+      "type": "circular",
+      "page_numbers": [
+        5
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD2/DCAP/P/CIR/2021/628 Dated September 07, 2021",
+      "type": "circular",
+      "page_numbers": [
+        5,
+        6
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD/MRD-PoD-3/P/CIR/2024/20 dated March 21, 2024",
+      "type": "circular",
+      "page_numbers": [
+        5
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD/MRD-PoD-3/P/CIR/2024/65 dated May 29, 2024",
+      "type": "circular",
+      "page_numbers": [
+        5,
+        6,
+        13
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD/MRD-PoD-3/2024/088 dated June 25, 2024",
+      "type": "circular",
+      "page_numbers": [
+        5
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD/MRD-PoD-2/P/CIR/2024/131 dated October 01, 2024",
+      "type": "circular",
+      "page_numbers": [
+        5
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD/MRD-PoD-2/P/CIR/2024/137 dated October 10, 2024",
+      "type": "circular",
+      "page_numbers": [
+        5
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Press Releases - PR No.111/2005 dated Sep 02, 2005",
+      "type": "other",
+      "page_numbers": [
+        5
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "Press Release No. 49/2018 dated December 03, 2018",
+      "type": "other",
+      "page_numbers": [
+        5
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "SEBI/HO/MRD2/DCAP/P/CIR/2022/0022",
+      "type": "circular",
+      "page_numbers": [
+        6,
+        10,
+        11
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "SEBI/HO/MRD/MRD-PoD-2/P/CIR/2023/016",
+      "type": "circular",
+      "page_numbers": [
+        6,
+        10,
+        11
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "SEBI/HO/MRD/POD-III/CIR/2023/165",
+      "type": "circular",
+      "page_numbers": [
+        6
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DRMNP/9/2013",
+      "type": "circular",
+      "page_numbers": [
+        6
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DRMNP/65/2016",
+      "type": "circular",
+      "page_numbers": [
+        6,
+        7
+      ],
+      "source": "both"
+    },
+    {
+      "title": "MRD/DP/26/2012",
+      "type": "circular",
+      "page_numbers": [
+        6
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DRMNP/36/2012",
+      "type": "circular",
+      "page_numbers": [
+        6
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DRMNP/37/2013",
+      "type": "circular",
+      "page_numbers": [
+        6
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DRMNP/008/2018",
+      "type": "circular",
+      "page_numbers": [
+        6,
+        7
+      ],
+      "source": "both"
+    },
+    {
+      "title": "MRD/DP/15/2014",
+      "type": "circular",
+      "page_numbers": [
+        6
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DP/15/2010",
+      "type": "circular",
+      "page_numbers": [
+        6
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DRMNP/9/2013 dated March 20, 2013",
+      "type": "circular",
+      "page_numbers": [
+        6
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular no. CIR/MRD/DRMNP/65/2016 dated July 15, 2016",
+      "type": "circular",
+      "page_numbers": [
+        6
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular no. SEBI/HO/MRD/DRMNP/CIR/P/2019/33 dated February 21, 2019",
+      "type": "circular",
+      "page_numbers": [
+        6,
+        7
+      ],
+      "source": "both"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD2/DCAP/CIR/P/2020/27 dated February 24, 2020",
+      "type": "circular",
+      "page_numbers": [
+        6
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. MRD/DoP/SE/Cir-07/2005 dated February 23, 2005",
+      "type": "circular",
+      "page_numbers": [
+        6
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD2/DCAP/CIR/P/2020/127 dated July 20, 2020",
+      "type": "circular",
+      "page_numbers": [
+        6
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD2/DCAP/P/CIR/2022/0022 dated February 24, 2022",
+      "type": "circular",
+      "page_numbers": [
+        6,
+        10,
+        11
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DP/26/2012 dated September 26, 2012",
+      "type": "circular",
+      "page_numbers": [
+        6
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. MRD/DRMNP/36/2012 dated December 19, 2012",
+      "type": "circular",
+      "page_numbers": [
+        6
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DRMNP/37/2013 dated December 19, 2013",
+      "type": "circular",
+      "page_numbers": [
+        6
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. MRD/DoP/SE/Cir-10/2008 dated April 17, 2008",
+      "type": "circular",
+      "page_numbers": [
+        6
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DRMNP/008/2018 dated January 08, 2018",
+      "type": "circular",
+      "page_numbers": [
+        6
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/MRD/DP/27/2013 dated September 12, 2013",
+      "type": "circular",
+      "page_numbers": [
+        6
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD/DP/CIR/P/2017/11 dated February 10, 2017",
+      "type": "circular",
+      "page_numbers": [
+        6
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. MRD/DRMNP/37/2013 dated December 19, 2013",
+      "type": "circular",
+      "page_numbers": [
+        6
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DP/15/2014 dated May 15, 2014",
+      "type": "circular",
+      "page_numbers": [
+        6
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. MRD/DoP/SE/Cir-08/2009 dated July 27, 2009",
+      "type": "circular",
+      "page_numbers": [
+        6
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DP/15/2010 dated April 28, 2010",
+      "type": "circular",
+      "page_numbers": [
+        6
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD/MRD-PoD-2/P/CIR/2023/016 dated February 01, 2023",
+      "type": "circular",
+      "page_numbers": [
+        6
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD/POD-III/CIR/2023/165 dated October 06, 2023",
+      "type": "circular",
+      "page_numbers": [
+        6
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD/DOPI/CIR/P/2018/161 dated December 31, 2018",
+      "type": "circular",
+      "page_numbers": [
+        7
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD/DRMNP/CIR/P/2018/155 dated December 17, 2018",
+      "type": "circular",
+      "page_numbers": [
+        7
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD/DP/CIR/P/2017/63 dated June 28, 2017",
+      "type": "circular",
+      "page_numbers": [
+        7
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "CIR/MRD/DoP-1/P/00108/2018 July 05, 2018",
+      "type": "circular",
+      "page_numbers": [
+        7
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "SEBI/HO/MRD/DRMNP/CIR/78 May 04, 2018",
+      "type": "circular",
+      "page_numbers": [
+        7
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "SEBI/HO/MRD/DRMNP/CIR/P/2017/32 April 18, 2017",
+      "type": "circular",
+      "page_numbers": [
+        7
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "SEBI/HO/MRD/DP/CIR/P/2016/60 June 22, 2016",
+      "type": "circular",
+      "page_numbers": [
+        7
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "March 09, 2016 - Introduction of Exchange Traded Cross Currency Derivatives contracts on EUR-USD, GBP-USD and USD-JPY currency pairs and Exchange Traded Option contracts on EUR-INR, GBP-INR and JPY-INR currency pairs.",
+      "type": "other",
+      "page_numbers": [
+        7
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "January 15, 2016 - Revised Position Limits for Currency Derivatives Contracts.",
+      "type": "other",
+      "page_numbers": [
+        7
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "July 13, 2015 - Review of minimum contract size in equity derivatives segment.",
+      "type": "other",
+      "page_numbers": [
+        7
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "June 12, 2015 - Exchange Traded Cash Settled Interest Rate Futures (IRF) on 6 year, 10 year and 13 year Government of India (GoI) Security.",
+      "type": "other",
+      "page_numbers": [
+        7
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "April 08, 2015 - Revision of limits relating to requirement of underlying exposure for currency derivatives contracts",
+      "type": "other",
+      "page_numbers": [
+        7
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "October 21, 2014 - Modification of client codes of non-institutional trades executed on stock exchanges (All Segments)",
+      "type": "other",
+      "page_numbers": [
+        7,
+        8
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "September 15, 2014 - Position Limits for Mutual Funds in 10-year Interest Rate Futures (IRF)",
+      "type": "other",
+      "page_numbers": [
+        7
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "January 20, 2014 - FII Position Limits in Exchange Traded Interest Rate Futures (IRF)",
+      "type": "other",
+      "page_numbers": [
+        7
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "March 20, 2013 - Acceptance of Corporate bonds and Government securities as collateral from FIIs",
+      "type": "other",
+      "page_numbers": [
+        7
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "Dec 19, 2012 - Requirement of Base Minimum Capital for Stock Broker and Trading Member",
+      "type": "other",
+      "page_numbers": [
+        8
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "Nov 20, 2012 - Mini derivative (Futures & Options) contract on Index (Sensex & Nifty)",
+      "type": "other",
+      "page_numbers": [
+        8,
+        9
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "Jul 23, 2012 - Revision of Eligibility Criteria for Stocks in Derivatives Segment",
+      "type": "other",
+      "page_numbers": [
+        8
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "May 23, 2012- Revised Position Limits for Trading Member (Banks) in Exchange Traded USD:INR derivative contracts",
+      "type": "other",
+      "page_numbers": [
+        8
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "December 30, 2011\u2013Interest Rate Futures on 2-year and 5-year Government of India Security",
+      "type": "other",
+      "page_numbers": [
+        8
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "Aug 10, 2011-Short-collection/Non-collection of client margins (Derivatives Segments)",
+      "type": "other",
+      "page_numbers": [
+        8
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "Jun 02, 2011-Liquidity enhancement schemes for illiquid securities in equity derivatives segment",
+      "type": "other",
+      "page_numbers": [
+        8
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "May 13, 2011-Self Clearing Member in the Currency Derivatives Segment",
+      "type": "other",
+      "page_numbers": [
+        8
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "March 7, 2011-Futures on 91-day Government of India Treasury-Bill (T- Bill)",
+      "type": "other",
+      "page_numbers": [
+        8
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "Jan 11, 2011-Introduction of Derivative Contracts on Foreign Stock Indices",
+      "type": "other",
+      "page_numbers": [
+        8
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "Oct 27, 2010- European Style Stock Options",
+      "type": "other",
+      "page_numbers": [
+        8
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "Jul 30, 2010- Options on USD-INR Spot Rate",
+      "type": "other",
+      "page_numbers": [
+        8
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "Jul 15, 2010- Physical Settlement of Stock Derivatives",
+      "type": "other",
+      "page_numbers": [
+        8
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "Jul 07, 2010- Revised Exposure Margin for Exchange Traded Equity Derivatives",
+      "type": "other",
+      "page_numbers": [
+        8
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "May 04, 2010- Introduction of Index options with tenure up to 5 years",
+      "type": "other",
+      "page_numbers": [
+        8,
+        9
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "Jan 19, 2010- Currency Futures on Additional Currency pairs",
+      "type": "other",
+      "page_numbers": [
+        8
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "Jan 11, 2010- Market Wide Position Limits across Stock Exchanges",
+      "type": "other",
+      "page_numbers": [
+        8
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "Jan 08, 2010- Standardized lot size for derivative contracts on individual securities",
+      "type": "other",
+      "page_numbers": [
+        8
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "Dec 22, 2009- Delivery Period for Interest Rate Futures",
+      "type": "other",
+      "page_numbers": [
+        8
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "Nov 13, 2009- Expiry Date for Equity Derivative Contracts",
+      "type": "other",
+      "page_numbers": [
+        8
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "Oct 23, 2009- Trading Hours on Stock Exchanges",
+      "type": "other",
+      "page_numbers": [
+        8
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "Aug 28, 2009- Exchange traded Interest Rate Futures",
+      "type": "other",
+      "page_numbers": [
+        8
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "Mar 24, 2009- Revised Position Limits for Exchange Traded Currency Derivatives",
+      "type": "other",
+      "page_numbers": [
+        8
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "Dec 02, 2008- Cross Margining across Exchange traded Equity (Cash) and Exchange traded Equity Derivatives (Derivatives) segments",
+      "type": "other",
+      "page_numbers": [
+        8
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "Nov 06, 2008- Issuance of Electronic Contract Notes in Equity Derivatives Segment",
+      "type": "other",
+      "page_numbers": [
+        8
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "Oct 06, 2008 -Eligibility criteria for introduction of derivatives on shares",
+      "type": "other",
+      "page_numbers": [
+        8
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "Aug 08, 2008- Extending calendar spread treatment till expiry of the near month contract",
+      "type": "other",
+      "page_numbers": [
+        8
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "Aug 06, 2008- Exchange Traded Currency Derivatives",
+      "type": "other",
+      "page_numbers": [
+        8
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "Circular No. DNPD/Cir-31/2006 dated January 20, 2006 65 Jan 20, 2006",
+      "type": "circular",
+      "page_numbers": [
+        9
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "circular no. DNPD/Cir-25/04 dated June 10, 2004 72 Jun 10, 2004",
+      "type": "circular",
+      "page_numbers": [
+        9
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Jan 15, 2008- Introduction of Volatility Index",
+      "type": "other",
+      "page_numbers": [
+        9
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "Sep 11, 2007- Circular on acceptance of Foreign Sovereign Securities as collateral from Foreign Institutional Investors (FIIs) for Exchange Traded Derivative Transactions",
+      "type": "circular",
+      "page_numbers": [
+        9
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "Feb 15, 2006- Clarification to Circular No. DNPD/Cir-31/2006 dated January 20, 2006",
+      "type": "other",
+      "page_numbers": [
+        9
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "Jan 20, 2006- Modification of the Trading Member/FII/Mutual Fund position limits for stock based exchange traded derivative contracts",
+      "type": "other",
+      "page_numbers": [
+        9
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "Jan 20, 2006- Review of the eligibility criteria of stocks for derivatives trading especially on account of corporate restructuring",
+      "type": "other",
+      "page_numbers": [
+        9
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "Sep 14, 2005- Trading by Mutual Funds in Exchange Traded Derivative Contracts",
+      "type": "other",
+      "page_numbers": [
+        9
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "Nov 22, 2004- Clarification on the definition of institutional trades and use of physical contract note",
+      "type": "other",
+      "page_numbers": [
+        9
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "Sep 28, 2004- Modifications in the STP messaging formats on account of implementation of the Securities Transaction Tax STT",
+      "type": "other",
+      "page_numbers": [
+        9
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "Jul 16, 2004- Risk containment measures, position limits and the broad eligibility criteria of Stocks and Index on which futures and options could be introduced",
+      "type": "other",
+      "page_numbers": [
+        9
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "Jun 10, 2004- Transaction work flow for the system of Straight Through Processing in the Indian Securities Market and standardisation of the messaging formats",
+      "type": "other",
+      "page_numbers": [
+        9
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "May 26, 2004- Straight Through Processing Service in the Indian Securities Market",
+      "type": "other",
+      "page_numbers": [
+        9
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "Apr 01, 2004- Mandatory use of STP system for all institutional trades executed on the stock exchanges",
+      "type": "other",
+      "page_numbers": [
+        9
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "Mar 09, 2004- Trading by FIIs and NRIs in Exchange Traded Interest Rate Derivative Contracts",
+      "type": "other",
+      "page_numbers": [
+        9
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "Feb 25, 2004- Issuance of Electronic Contract Notes - Debt Market",
+      "type": "other",
+      "page_numbers": [
+        9
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "Feb 23, 2004- Minimum contract size for Exchange traded derivative contracts",
+      "type": "other",
+      "page_numbers": [
+        9
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "Feb 06, 2004- Recognition of credit ratings given by reputed foreign credit rating agencies",
+      "type": "other",
+      "page_numbers": [
+        9
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "Jan 05, 2004- Scheme for introduction of Exchange Traded Interest Rate Derivative Contracts on a basket of Government Securities",
+      "type": "other",
+      "page_numbers": [
+        9
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "Apr 29, 2003- Issuance of Contract Notes in electronic form",
+      "type": "other",
+      "page_numbers": [
+        9
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "Apr 19, 2003 -Circular-Scheme for introduction of Exchange Traded Interest Rate Derivative Contracts",
+      "type": "circular",
+      "page_numbers": [
+        9
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "Mar 13, 2003- Monthly Reporting Format-Circular",
+      "type": "circular",
+      "page_numbers": [
+        9
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "Dec 18, 2002- Adjustment in stock option contracts and single stock future contracts at the time of corporate actions",
+      "type": "other",
+      "page_numbers": [
+        9
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "Dec 18, 2002- Review of recommendations of Dr. L. C. Gupta Committee on Derivatives.",
+      "type": "other",
+      "page_numbers": [
+        9
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "Dec 18, 2002- Risk containment measures and broad eligibility criteria of stocks on which stock options and single stock futures could be introduced",
+      "type": "other",
+      "page_numbers": [
+        9
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "SEBI/HO/MRD/MRD-PoD-3/P/CIR/2023/11",
+      "type": "circular",
+      "page_numbers": [
+        10,
+        11
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DP/12/2014",
+      "type": "circular",
+      "page_numbers": [
+        10
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DP/20/2014",
+      "type": "circular",
+      "page_numbers": [
+        10
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD/CIR/P/2019/103 dated September 26, 2019",
+      "type": "circular",
+      "page_numbers": [
+        10
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD/DOP1/CIR/P/2019/128 dated November 08, 2019",
+      "type": "circular",
+      "page_numbers": [
+        10
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD2/DCAP/CIR/P/2020/27 dated February 24, 2020 108 SEBI Email dated May 4, 2020",
+      "type": "circular",
+      "page_numbers": [
+        10
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD2/DCAP/CIR/P/2020/127 dated Jul 20, 2020",
+      "type": "circular",
+      "page_numbers": [
+        10
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD/MRD-PoD-3/P/CIR/2023/11 dated January 10, 2023",
+      "type": "circular",
+      "page_numbers": [
+        10,
+        11
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD/MRD-PoD-2/P/CIR/2023/016 dated February 01, 2023 116 SEBI Email dated May 4, 2020",
+      "type": "circular",
+      "page_numbers": [
+        10
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DP/12/2014 dated April 07, 2014",
+      "type": "circular",
+      "page_numbers": [
+        10
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DP/20/2014 dated June 20, 2014",
+      "type": "circular",
+      "page_numbers": [
+        10
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "SMDRP/Policy/Cir-10/2001",
+      "type": "circular",
+      "page_numbers": [
+        10
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "Circular No.8726",
+      "type": "circular",
+      "page_numbers": [
+        10
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "Circular No.1847- Guidelines on Conduct of Certification Examination",
+      "type": "circular",
+      "page_numbers": [
+        10
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "SEBI Email dated May 4, 2020 on Rationalisation of Strikes on Long dated options",
+      "type": "other",
+      "page_numbers": [
+        10,
+        11
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "SEBI/HO/MRD/TPD-1/P/CIR/2024/24",
+      "type": "circular",
+      "page_numbers": [
+        11
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "SEBI/HO/MRD/MRD-PoD-2/P/CIR/2024/116",
+      "type": "circular",
+      "page_numbers": [
+        11
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "SEBI/HO/MRD/TPD-1/P/CIR/2024/132",
+      "type": "circular",
+      "page_numbers": [
+        11
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "SEBI/HO/MRD/MRD-PoD-2/P/CIR/2024/140",
+      "type": "circular",
+      "page_numbers": [
+        11
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD/MRD-PoD-2/P/CIR/2023/016 dated February 01, 2023 127 SEBI Email dated May 4, 2020",
+      "type": "circular",
+      "page_numbers": [
+        11
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD/TPD-1/P/CIR/2024/24 dated April 23, 2024",
+      "type": "circular",
+      "page_numbers": [
+        11
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD/MRD-PoD-3/P/CIR/2024/65 dated May 29 2024",
+      "type": "circular",
+      "page_numbers": [
+        11
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD/MRD-PoD-2/P/CIR/2024/116 dated August 30, 2024",
+      "type": "circular",
+      "page_numbers": [
+        11
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD/TPD-1/P/CIR/2024/132 dated October 01, 2024",
+      "type": "circular",
+      "page_numbers": [
+        11
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD/MRD-PoD-2/P/CIR/2024/140 dated October 15, 2024",
+      "type": "circular",
+      "page_numbers": [
+        11
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SMD-II/11615/92 dated November 20, 1992",
+      "type": "circular",
+      "page_numbers": [
+        11
+      ],
+      "source": "both"
+    },
+    {
+      "title": "Circular No. SMD/SED/6919/93 dated April 20, 1993",
+      "type": "circular",
+      "page_numbers": [
+        11
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SMD/536/95 dated March 28, 1995",
+      "type": "circular",
+      "page_numbers": [
+        11,
+        1
+      ],
+      "source": "both"
+    },
+    {
+      "title": "Letter No. SMD/RCG/3737/96 dated August 13, 1996",
+      "type": "circular",
+      "page_numbers": [
+        11
+      ],
+      "source": "both"
+    },
+    {
+      "title": "Circular No. SMD/POLICY/IECG/5694/96 dated December 20, 1996",
+      "type": "circular",
+      "page_numbers": [
+        11
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SMD/POLICY/IECG/2-97 dated February 25, 1997",
+      "type": "circular",
+      "page_numbers": [
+        11
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SMD/POLICY/CIRCULAR-27/97 dated November 05, 1997",
+      "type": "circular",
+      "page_numbers": [
+        11
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SMD/POLICY/CIRCULAR-09/98 dated February 24, 1998",
+      "type": "circular",
+      "page_numbers": [
+        11
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SMDRP/Policy/Cir-33/98 dated November 12, 1998",
+      "type": "circular",
+      "page_numbers": [
+        11
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SMD-II/POLICY/CIR-37/99 dated November 26, 1999",
+      "type": "circular",
+      "page_numbers": [
+        11
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SMD-I/POLICY/CIR-40/99 dated December 16, 1999",
+      "type": "circular",
+      "page_numbers": [
+        11
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SMD-II/ALLSE/CIR-02/2000 dated January 10, 2000",
+      "type": "circular",
+      "page_numbers": [
+        11
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Letter No. LKS/229/2001 dated May 18, 2001",
+      "type": "circular",
+      "page_numbers": [
+        11
+      ],
+      "source": "both"
+    },
+    {
+      "title": "Circular No. SMDRP/Policy/Cir-41/2001 dated August 09, 2001",
+      "type": "circular",
+      "page_numbers": [
+        11
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. Ref. SMD-II/52 dated January 10, 1996",
+      "type": "circular",
+      "page_numbers": [
+        11
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "MRD/SE/15958/2003",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DSA/6899/2004",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "both"
+    },
+    {
+      "title": "MRD/DSA/17/2010",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DSA/24/2010",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DSA/29/2010",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DSA/SE/43/2010",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DSA/2/2011",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DSA/03/2012",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DSA/04/2012",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DSA/06/2012",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DSA/14/2012",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/ICC/29/2012",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DSA/31/2012",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DSA/33/2012",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/ICC/8/2013",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/ICC/20/2013",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/ICC/21/2013",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/ICC/29/2013",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/ICC/30/2013",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DSA/31/2013",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DSA/33/2013",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DSA/18/2014",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DSA/33/2014",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DSA/05/2015",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "MRD/DSA/01/2016",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Master circular no. CIR/MRD/DSA/SE/43/2010 dated December 31, 2010",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SMD/POLICY/CIR-2/2002 dated January 10, 2002",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SMD/POLICY/CIR-4/2003 dated February 11, 2003",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SMD/Policy/Cir-8/2003 dated March 4, 2003",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Letter No. SMD/SEAD/9971/03 dated May 21, 2003",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "both"
+    },
+    {
+      "title": "Circular No. SEBI/MRD/SE/15958/2003 dated August 22, 2003",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Letter No. MRD/DSA/6899/2004 dated April 07, 2004",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. MRD/POLICY/CIR-33/2004 dated September 30, 2004",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. MRD/DOP/SE/Cir-5/2005 dated February 9, 2005",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. MRD/DoP/SE/Cir-10/2009 dated September 03, 2009",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. MRD/DSA/SE/Cir-8/2010 dated April 1, 2010",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. MRD/DSA/17/2010 dated May 18, 2010",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SMD/MRD/DSA/24/2010 dated August 11, 2010",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DSA/29/2010 dated August 31, 2010",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "circular no. CIR/MRD/DSA/SE/43/2010 dated December 31, 2010",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DSA/2/2011 dated February 09, 2011",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DSA/03/2012 dated January 20, 2012",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DSA/04/2012 dated January 20, 2012",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. MRD/DSA/06/2012 dated February 21, 2012",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. MRD/DSA/14/2012 dated May 30, 2012",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. MRD/DSA/31/2012 dated November 27, 2012",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DSA/33/2012 dated December 13, 2012",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. CIR/MRD/ICC/8/2013 dated March 18, 2013",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. CIR/MRD/ICC/20/2013 dated July 05, 2013",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. CIR/MRD/ICC/21/2013 dated July 05, 2013",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. CIR/MRD/ICC/29/2013 dated September 26, 2013",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. CIR/MRD/ICC/30/2013 dated September 26, 2013",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. MRD/DSA/31/2013 dated September 30, 2013",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. MRD/DSA/33/2013 dated October 24, 2013",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. MRD/DSA/18/2014 dated May 22, 2014",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. MRD/DSA/33/2014 dated December 09, 2014",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. MRD/DSA/05/2015 dated April 17, 2015",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. MRD/DSA/01/2016 dated January 01, 2016",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. MRD/DSA/CIR/P/2016/30 dated January 22, 2016",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD/DRMNP/CIR/P/2016/54 dated May 04, 2016",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. MRD/DSA/CIR/P/2016/110 dated October 10, 2016",
+      "type": "circular",
+      "page_numbers": [
+        12
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Letter dated September 02, 2002",
+      "type": "other",
+      "page_numbers": [
+        12,
+        13
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "Letters dated August 31, 2005 / September 21, 2005",
+      "type": "other",
+      "page_numbers": [
+        12
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "Letters dated February 20, 2009",
+      "type": "other",
+      "page_numbers": [
+        12,
+        13
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "SEBI/HO/MRD/MRD-PoD-3/P/CIR/2022/173",
+      "type": "circular",
+      "page_numbers": [
+        13
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "SEBI/HO/MRD-PoD-3/P/CIR/2023/81",
+      "type": "circular",
+      "page_numbers": [
+        13
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "SEBI/HO/MRD/MRD-PoD-3/P/CIR/2023/190",
+      "type": "circular",
+      "page_numbers": [
+        13
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "SEBI/HO/MRD/MRD-PoD-2/P/CIR/2024/63",
+      "type": "circular",
+      "page_numbers": [
+        13
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "SEBI/HO/MRD/MRD-PoD-3/P/CIR/2024/139",
+      "type": "circular",
+      "page_numbers": [
+        13
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD/DSA/CIR/P/2016/113 dated October 19, 2016",
+      "type": "circular",
+      "page_numbers": [
+        13
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. MRD/DSA/CIR/P/2017/5 dated January 05, 2017",
+      "type": "circular",
+      "page_numbers": [
+        13
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. MRD/DSA/CIR/P/2017/9 dated January 27, 2017",
+      "type": "circular",
+      "page_numbers": [
+        13
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/DMS/CIR/P/2017/15 dated February 23, 2017",
+      "type": "circular",
+      "page_numbers": [
+        13
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD/DRMNP/CIR/P/2017/24 dated March 16, 2017",
+      "type": "circular",
+      "page_numbers": [
+        13
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. MRD/DSA/CIR/P/2017/27 dated March 27, 2017",
+      "type": "circular",
+      "page_numbers": [
+        13
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. MRD/DSA/CIR/P/2017/92 dated August 01, 2017",
+      "type": "circular",
+      "page_numbers": [
+        13
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD/DP/CIR/P/2017/101 dated September 13, 2017",
+      "type": "circular",
+      "page_numbers": [
+        13
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD/DSA/CIR/P/2018/14 dated January 29, 2018",
+      "type": "circular",
+      "page_numbers": [
+        13
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. CIR/MRD/DRMNP/CIR/P/2018/145 dated November 27, 2018",
+      "type": "circular",
+      "page_numbers": [
+        13
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD/DOP2DSA2/CIR/P/2019/13 dated January 10, 2019",
+      "type": "circular",
+      "page_numbers": [
+        13
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD/DOP2DSA2/CIR/P/2019/26 dated February 05, 2019",
+      "type": "circular",
+      "page_numbers": [
+        13
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD/DOP2DSA2/CIR/P/2019/31 dated February 15, 2019",
+      "type": "circular",
+      "page_numbers": [
+        13
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD/DRMNP/CIR/P/2019/55 dated April 10, 2019",
+      "type": "circular",
+      "page_numbers": [
+        13
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD2/DCAP/CIR/P/2019/145 dated November 28, 2019",
+      "type": "circular",
+      "page_numbers": [
+        13
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD/DDAP/CIR/P/2020/16 dated January 28, 2020",
+      "type": "circular",
+      "page_numbers": [
+        13
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD2/DCAP/CIR/P/2020/45 dated March 23, 2020",
+      "type": "circular",
+      "page_numbers": [
+        13
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD/DCAP/CIR/P/2021/23 dated March 03, 2021",
+      "type": "circular",
+      "page_numbers": [
+        13
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular no. SEBI/HO/MRD1/ICC1/CIR/P/2022/94 dated July 04, 2022",
+      "type": "circular",
+      "page_numbers": [
+        13
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular no. SEBI/HO/MRD/MRD-PoD-3/P/CIR/2022/173 dated December 16, 2022",
+      "type": "circular",
+      "page_numbers": [
+        13
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD-PoD-3/P/CIR/2023/81 dated May 30, 2023",
+      "type": "circular",
+      "page_numbers": [
+        13
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular no. SEBI/HO/MRD/MRD-POD-3/CIR/P/2023/104 dated June 26, 2023",
+      "type": "circular",
+      "page_numbers": [
+        13
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD/MRD-PoD-3/P/CIR/2023/190 dated December 19, 2023",
+      "type": "circular",
+      "page_numbers": [
+        13
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD/MRD-PoD-2/P/CIR/2024/63 dated May 29, 2024",
+      "type": "circular",
+      "page_numbers": [
+        13
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Circular No. SEBI/HO/MRD/MRD-PoD-3/P/CIR/2024/139 dated October 14, 2024",
+      "type": "circular",
+      "page_numbers": [
+        13
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "SEBI email dated May 30, 2017",
+      "type": "other",
+      "page_numbers": [
+        13
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "SEBI email dated April 25, 2019 regarding clarifications on interoperability",
+      "type": "other",
+      "page_numbers": [
+        13
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "SEBI letter dated January 5, 2023",
+      "type": "other",
+      "page_numbers": [
+        13
+      ],
+      "source": "llm"
+    }
+  ],
+  "stats": {
+    "total": 463,
+    "regex_only": 334,
+    "llm_only": 81,
+    "both": 48
+  }
+}
