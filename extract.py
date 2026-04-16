@@ -523,59 +523,77 @@ def _parse_llm_response_obj(text: str) -> dict | None:
     return None
 
 
-def extract_references(pdf_path: str) -> dict:
+def extract_references(pdf_path: str, pages: list[int] | None = None,
+                       regex_only: bool = False, skip_verify: bool = False) -> dict:
     """
     Main extraction function. Returns dict with:
     - references: merged list of all references
     - stats: counts by source
+
+    If *pages* is given (1-indexed page numbers), only those pages are processed.
+    If *regex_only* is True, skip LLM extraction entirely (fast mode).
+    If *skip_verify* is True, skip the LLM verification pass.
     """
     print(f"Parsing PDF: {pdf_path}")
-    pages = extract_text_by_page(pdf_path)
-    print(f"  Extracted text from {len(pages)} pages")
+    all_pages = extract_text_by_page(pdf_path)
+    print(f"  PDF has {len(all_pages)} pages")
+
+    if pages:
+        selected = [p for p in all_pages if p["page_num"] in pages]
+        skipped = set(pages) - {p["page_num"] for p in selected}
+        if skipped:
+            print(f"  Warning: pages {sorted(skipped)} not found in PDF (max page: {len(all_pages)})")
+        print(f"  Processing {len(selected)} of {len(all_pages)} pages: {sorted(p['page_num'] for p in selected)}")
+    else:
+        selected = all_pages
+        print(f"  Processing all {len(selected)} pages")
 
     # Regex pass
     print("  Running regex extraction...")
-    regex_refs = extract_references_regex(pages)
+    regex_refs = extract_references_regex(selected)
     print(f"  Found {len(regex_refs)} references via regex")
 
-    # LLM pass (informed by regex results)
-    print("  Running LLM extraction (informed by regex results)...")
-    llm_refs = extract_references_llm(pages, regex_refs=regex_refs)
-    print(f"  Found {len(llm_refs)} references via LLM")
-
-    # Merge: start with regex results, add non-duplicate LLM results
     merged = list(regex_refs)
     llm_only_count = 0
 
-    for llm_ref in llm_refs:
-        is_dup = False
-        for existing in merged:
-            if _is_duplicate(llm_ref["title"], existing["title"]):
-                # Mark as found by both
-                if existing["source"] == "regex":
-                    existing["source"] = "both"
-                # Merge page numbers
-                for pn in llm_ref.get("page_numbers", []):
-                    if pn not in existing["page_numbers"]:
-                        existing["page_numbers"].append(pn)
-                is_dup = True
-                break
-        if not is_dup and llm_ref["title"]:
-            merged.append(llm_ref)
-            llm_only_count += 1
+    if not regex_only:
+        # LLM pass (informed by regex results)
+        print("  Running LLM extraction (informed by regex results)...")
+        llm_refs = extract_references_llm(selected, regex_refs=regex_refs)
+        print(f"  Found {len(llm_refs)} references via LLM")
 
-    # Sort by first page number
-    merged.sort(key=lambda r: r["page_numbers"][0] if r["page_numbers"] else 999)
+        # Merge: add non-duplicate LLM results
+        for llm_ref in llm_refs:
+            is_dup = False
+            for existing in merged:
+                if _is_duplicate(llm_ref["title"], existing["title"]):
+                    if existing["source"] == "regex":
+                        existing["source"] = "both"
+                    for pn in llm_ref.get("page_numbers", []):
+                        if pn not in existing["page_numbers"]:
+                            existing["page_numbers"].append(pn)
+                    is_dup = True
+                    break
+            if not is_dup and llm_ref["title"]:
+                merged.append(llm_ref)
+                llm_only_count += 1
 
-    # LLM-powered deduplication: merge near-duplicate fragments into canonical forms
-    print("  Running LLM-powered deduplication...")
-    merged = _llm_deduplicate(merged)
-    print(f"  {len(merged)} references after deduplication")
+        # Sort by first page number
+        merged.sort(key=lambda r: r["page_numbers"][0] if r["page_numbers"] else 999)
 
-    # LLM verification pass: filter out false positives
-    print("  Running LLM verification pass...")
-    merged = _llm_verify(merged, pages)
-    print(f"  {len(merged)} references after verification")
+        # LLM-powered deduplication
+        print("  Running LLM-powered deduplication...")
+        merged = _llm_deduplicate(merged)
+        print(f"  {len(merged)} references after deduplication")
+
+        if not skip_verify:
+            print("  Running LLM verification pass...")
+            merged = _llm_verify(merged, selected)
+            print(f"  {len(merged)} references after verification")
+        else:
+            print("  Skipping LLM verification (--no-verify)")
+    else:
+        print("  Skipping LLM extraction (--regex-only)")
 
     # Stats
     stats = {

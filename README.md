@@ -337,11 +337,26 @@ pip install -r requirements.txt
 ### Step 3: Run extraction
 
 ```bash
-# Basic extraction (prints to console)
+# Basic extraction — full PDF, all pages (prints to console)
 python main.py extract path/to/circular.pdf
 
 # Save results to JSON
 python main.py extract path/to/circular.pdf --output results.json
+
+# Process only specific pages (1-indexed)
+python main.py extract path/to/circular.pdf --pages 10
+python main.py extract path/to/circular.pdf --pages 1,3,10
+python main.py extract path/to/circular.pdf --pages 5-8
+python main.py extract path/to/circular.pdf --pages 1,3,5-7,10
+
+# Regex-only mode (no LLM calls — instant results)
+python main.py extract path/to/circular.pdf --regex-only
+
+# Skip the LLM verification pass (saves ~30s per batch)
+python main.py extract path/to/circular.pdf --no-verify
+
+# Combine flags — fast test on one page
+python main.py extract path/to/circular.pdf --pages 10 --no-verify -o results.json
 ```
 
 ### Step 4: Run evaluation (optional)
@@ -354,8 +369,9 @@ python main.py evaluate path/to/circular.pdf ground_truth_sample.json
 ### Step 5: Run prompt optimization (optional)
 
 ```bash
-# Basic iterative optimizer (2 iterations)
-python main.py optimize path/to/circular.pdf ground_truth_sample.json --iterations 2
+# Basic iterative optimizer (2 iterations by default)
+python main.py optimize path/to/circular.pdf ground_truth_sample.json
+python main.py optimize path/to/circular.pdf ground_truth_sample.json --iterations 3
 
 # GEPA evolutionary optimizer (5 iterations, population of 4)
 python main.py gepa path/to/circular.pdf ground_truth_sample.json --iterations 5 --population 4
@@ -369,6 +385,44 @@ python main.py gepa path/to/circular.pdf ground_truth_sample.json --iterations 5
 | `evaluate` | Compare extraction against ground truth | `python main.py evaluate circular.pdf gt.json` |
 | `optimize` | Iterative prompt optimization | `python main.py optimize circular.pdf gt.json -n 3` |
 | `gepa` | GEPA evolutionary optimization | `python main.py gepa circular.pdf gt.json -n 5 -p 4` |
+
+### Extract Command — All Flags
+
+| Flag | Short | Description | Default |
+|------|-------|-------------|---------|
+| `--output` | `-o` | Save results to a JSON file | (print to console only) |
+| `--pages` | | Pages to process: `1`, `1,3,10`, `5-8`, or `1,3,5-8` | All pages |
+| `--regex-only` | | Skip LLM extraction entirely (fast, regex-only) | Off |
+| `--no-verify` | | Skip the LLM verification pass | Off |
+
+### Optimize Command — Flags
+
+| Flag | Short | Description | Default |
+|------|-------|-------------|---------|
+| `--iterations` | `-n` | Number of optimization iterations | 2 |
+
+### GEPA Command — Flags
+
+| Flag | Short | Description | Default |
+|------|-------|-------------|---------|
+| `--iterations` | `-n` | Number of evolution generations | 5 |
+| `--population` | `-p` | Number of prompts in the population | 4 |
+
+### Practical Tips
+
+```bash
+# Quick sanity check (regex only, page 1, ~instant)
+python main.py extract circular.pdf --pages 1 --regex-only
+
+# Test LLM on a page with informal references (~90s)
+python main.py extract circular.pdf --pages 10 --no-verify -o test.json
+
+# Full hybrid run on 3 pages (~5min)
+python main.py extract circular.pdf --pages 1,6,10 -o results.json
+
+# Full pipeline on entire PDF (~20-30min with local 7B model)
+python main.py extract circular.pdf -o results.json
+```
 
 ---
 

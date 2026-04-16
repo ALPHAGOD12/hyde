@@ -12,9 +12,28 @@ from extract import extract_references
 from evaluate import run_evaluation
 
 
+def _parse_pages(pages_str):
+    """Parse a page specification like '1,3,5-7' into a sorted list of page numbers."""
+    pages = set()
+    for part in pages_str.split(","):
+        part = part.strip()
+        if "-" in part:
+            lo, hi = part.split("-", 1)
+            pages.update(range(int(lo), int(hi) + 1))
+        else:
+            pages.add(int(part))
+    return sorted(pages)
+
+
 def cmd_extract(args):
     """Extract references from a PDF."""
-    result = extract_references(args.pdf)
+    pages = _parse_pages(args.pages) if args.pages else None
+    result = extract_references(
+        args.pdf,
+        pages=pages,
+        regex_only=args.regex_only,
+        skip_verify=args.no_verify,
+    )
     refs = result["references"]
     stats = result["stats"]
 
@@ -80,6 +99,17 @@ def main():
     extract_parser = subparsers.add_parser("extract", help="Extract references from a PDF")
     extract_parser.add_argument("pdf", help="Path to the SEBI circular PDF")
     extract_parser.add_argument("--output", "-o", help="Output JSON file path")
+    extract_parser.add_argument(
+        "--pages", help="Pages to process (e.g. '1,3,5-7'). Defaults to all pages."
+    )
+    extract_parser.add_argument(
+        "--regex-only", action="store_true",
+        help="Use only regex extraction (skip LLM). Much faster."
+    )
+    extract_parser.add_argument(
+        "--no-verify", action="store_true",
+        help="Skip LLM verification pass (saves time)."
+    )
 
     # Evaluate command
     eval_parser = subparsers.add_parser("evaluate", help="Evaluate extraction against ground truth")
