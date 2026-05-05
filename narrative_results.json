@@ -1,0 +1,134 @@
+{
+  "references": [
+    {
+      "title": "SEBI/HO/IMD/IMD-PoD-1/P/CIR/2024/144",
+      "type": "circular",
+      "page_numbers": [
+        1
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "SEBI (Prohibition of Insider Trading) Regulations, 2015",
+      "type": "regulation",
+      "page_numbers": [
+        1,
+        4,
+        5
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "notification dated November 24, 2022",
+      "type": "gazette",
+      "page_numbers": [
+        1
+      ],
+      "source": "llm"
+    },
+    {
+      "title": "Master Circular for",
+      "type": "circular",
+      "page_numbers": [
+        2,
+        3
+      ],
+      "source": "both"
+    },
+    {
+      "title": "Master Circular is",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Master Circular shall",
+      "type": "circular",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Master Circular stands",
+      "type": "circular",
+      "page_numbers": [
+        2,
+        3
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Clause 12 of Schedule B1 and Clause 11A of Schedule C of PIT",
+      "type": "section_reference",
+      "page_numbers": [
+        2
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Securities and Exchange Board of India Act, 1992",
+      "type": "act",
+      "page_numbers": [
+        3
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Section 11(1) of the Securities and Exchange Board of India Act",
+      "type": "section_reference",
+      "page_numbers": [
+        3
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "SEBI (Prohibition of Insider Trad- ing) Regulations, 2015",
+      "type": "regulation",
+      "page_numbers": [
+        6
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "SEBI(Prohibition of Insider Trading) Regulations, 2015",
+      "type": "regulation",
+      "page_numbers": [
+        6
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "SEBI (PIT) Regulations, 2015",
+      "type": "regulation",
+      "page_numbers": [
+        6
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Regulation 5F(1) of SEBI(Prohibition of Insider Trading) Regulations",
+      "type": "section_reference",
+      "page_numbers": [
+        6
+      ],
+      "source": "regex"
+    },
+    {
+      "title": "Regulation 5F(2) of SEBI(Prohibition of Insider Trading) Regulations",
+      "type": "section_reference",
+      "page_numbers": [
+        6
+      ],
+      "source": "regex"
+    }
+  ],
+  "stats": {
+    "total": 15,
+    "regex_only": 13,
+    "llm_only": 1,
+    "both": 1
+  }
+}

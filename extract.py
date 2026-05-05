@@ -162,47 +162,55 @@ The following references have ALREADY been found by pattern matching:
 
 Your job is to find ADDITIONAL cross-references to other documents that the pattern matcher missed.
 
-PRIORITY FORMATS TO FIND (most commonly missed):
+SEBI documents come in two styles. You must handle BOTH:
 
-1. DATE-TITLE ENTRIES in numbered lists — these are the most important to catch.
-   They appear as a serial number followed by a date and a descriptive subject, with NO formal circular number.
-   Examples from real SEBI documents:
+--- STYLE A: LIST-FORMAT (Master Circulars) ---
+References appear as numbered list entries. Find these:
+
+1. DATE-TITLE ENTRIES in numbered lists — serial number + date + subject, NO formal circular number:
    - "39 Oct 27, 2010- European Style Stock Options"
-   - "72 Jul 08, 2004 - Clarification for circular no. DNPD/Cir-25/04 dated June 10, 2004"
    - "97 Dec 15, 2000 - Use of Digital Signature on Contract Notes"
-   - "55 Jun 16, 1998 - Derivatives trading in India"
-   - "67 December 05, 2013 - Exchange Traded Cash Settled Interest Rate Futures (IRF) on 10-Year Government of India Security"
    - "40 Jul 28, 1999 - Risk Containment Measures for the Index Futures Market"
 
-2. REF. NO. FORMAT — references starting with "Ref. No." or "Ref.No." or "Ref. SMD/..." :
+2. REF. NO. FORMAT:
    - "Ref. No. DNPD/Cir-23/04 dated April 27, 2004"
-   - "Ref.No. DNPD/Cir-25/04 dated June 10, 2004"
    - "Ref. SMD/6059 dated October 17, 1994"
 
-3. LETTERS AND EMAILS — SEBI letters, emails, and informal references:
-   - "SEBI letter dated January 5, 2023"
-   - "SEBI email dated February 06, 2020"
-   - "Letter dated November 6, 2008"
-   - "Letter dated May 29, 2019"
-   - "SEBI Email dated May 4, 2020 on Rationalisation of Strikes on Long dated options"
-
-4. PRESS RELEASES:
+3. PRESS RELEASES:
    - "Press Release No. 49/2018 dated December 03, 2018"
 
-5. CIRCULAR NUMBERS with non-standard prefixes (SMD, SMDRP, DNPD, etc.):
+4. CIRCULAR NUMBERS with non-standard prefixes (SMD, SMDRP, DNPD):
    - "Circular No. SMD/536/95 dated March 28, 1995"
-   - "Circular No. Ref. SMD-II/52 dated January 10, 1996"
-   - "Circular No. SMD/POLICY/CIR (DBA-II)-37/98 dated December 04, 1998"
+
+--- STYLE B: NARRATIVE/PROSE FORMAT (Policy Circulars) ---
+References are embedded INSIDE sentences. Look for documents cited with:
+- "vide notification dated ..."
+- "vide circular dated ..."
+- "Master Circular for [topic] dated [date]"
+- "notification dated [date]" (standalone Gazette/amendment notification)
+- "read with [Regulation/Section] ..."
+- "in terms of Regulation X of ..."
+- "referred to as '...'" (a shorthand name for a referenced regulation)
+- "in continuation of ... circular ... dated ..."
+- "in partial modification of ... circular ... dated ..."
+- SEBI letters/emails: "SEBI letter dated ...", "SEBI Email dated ..."
+
+Examples from narrative circulars:
+- "vide notification dated November 24, 2022" → Gazette notification reference
+- "Master Circular for Mutual Funds dated June 27, 2024" → Master Circular reference
+- "SEBI (Prohibition of Insider Trading) Regulations, 2015 (hereinafter referred to as 'PIT Regulations')" → already found by regex, skip
+- "notification dated November 24, 2022 shall be applicable from November 01, 2024" → notification ref
 
 Do NOT repeat references already listed above. Only return NEW ones.
+Do NOT extract generic phrases like "the above circular" or "the aforesaid notification" without a date or number.
 
 EXAMPLES:
 
-Example 1 (date-title entry from numbered list):
+Example 1 (date-title list entry):
 Text: "39 Oct 27, 2010- European Style Stock Options"
 Output: {{"title": "Oct 27, 2010- European Style Stock Options", "type": "circular", "page_numbers": [8]}}
 
-Example 2 (date-title entry with full date):
+Example 2 (date-title list entry):
 Text: "67 December 05, 2013 - Exchange Traded Cash Settled Interest Rate Futures (IRF) on 10-Year Government of India Security"
 Output: {{"title": "December 05, 2013 - Exchange Traded Cash Settled Interest Rate Futures (IRF) on 10-Year Government of India Security", "type": "circular", "page_numbers": [9]}}
 
@@ -211,23 +219,27 @@ Text: "Ref. No. DNPD/Cir-23/04 dated April 27, 2004"
 Output: {{"title": "Ref. No. DNPD/Cir-23/04 dated April 27, 2004", "type": "other", "page_numbers": [7]}}
 
 Example 4 (SEBI email):
-Text: "108 SEBI Email dated May 4, 2020 on Rationalisation of Strikes on Long dated options"
+Text: "SEBI Email dated May 4, 2020 on Rationalisation of Strikes on Long dated options"
 Output: {{"title": "SEBI Email dated May 4, 2020 on Rationalisation of Strikes on Long dated options", "type": "other", "page_numbers": [10]}}
 
-Example 5 (letter reference):
-Text: "Letter dated November 6, 2008"
-Output: {{"title": "Letter dated November 6, 2008", "type": "other", "page_numbers": [12]}}
+Example 5 (prose — vide notification):
+Text: "vide notification dated November 24, 2022 (link), mutual funds units were included under the SEBI (Prohibition of Insider Trading) Regulations, 2015"
+Output: {{"title": "notification dated November 24, 2022", "type": "gazette", "page_numbers": [1]}}
 
-Example 6 (non-standard circular prefix):
+Example 6 (prose — Master Circular with date):
+Text: "Clause 6.6 of Master Circular for Mutual Funds dated June 27, 2024 ('Master Circular') with the amended PIT Regulations"
+Output: {{"title": "Master Circular for Mutual Funds dated June 27, 2024", "type": "circular", "page_numbers": [2]}}
+
+Example 7 (prose — amendment notification):
+Text: "The amendments notified through the notification dated November 24, 2022 shall be applicable from November 01, 2024 (link to the Gazette notification)."
+Output: {{"title": "Gazette notification dated November 01, 2024", "type": "gazette", "page_numbers": [1]}}
+
+Example 8 (non-standard circular prefix):
 Text: "Circular No. SMD/536/95 dated March 28, 1995"
 Output: {{"title": "Circular No. SMD/536/95 dated March 28, 1995", "type": "circular", "page_numbers": [1]}}
 
-Example 7 (date-title entry with risk topic):
-Text: "40 Jul 28, 1999 - Risk Containment Measures for the Index Futures Market"
-Output: {{"title": "Jul 28, 1999 - Risk Containment Measures for the Index Futures Market", "type": "circular", "page_numbers": [9]}}
-
 For each new reference return:
-- "title": the document title or identifier as it appears in the text
+- "title": the document title or identifier as it appears in the text (include the date if present)
 - "type": one of "circular", "regulation", "act", "gazette", "section_reference", "other"
 - "page_numbers": list of page numbers where it appears
 
